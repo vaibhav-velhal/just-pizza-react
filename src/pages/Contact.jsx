@@ -38,7 +38,7 @@ function ContactPage() {
     };
 
     return (
-        <div className="row w-100 m-0">
+        <div id="row-div" className="row w-100 m-0">
             <div className="col-6 p-0 pizza-left-img"></div>
             <div id="form-div" className="col-md-6 p-0">
                 <form onSubmit={onSubmit}>

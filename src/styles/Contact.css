@@ -24,7 +24,7 @@ form button {
 }
 
 @media (max-width: 767px) {
-    .row {
+    #row-div {
         background: url("/pizzaLeft.jpg") no-repeat center center;
         background-size: cover;
     }
