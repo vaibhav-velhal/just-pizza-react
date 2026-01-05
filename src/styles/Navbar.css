@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #121619;
+    color: white;
+}
+
+.navbar-collapse a, li {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
