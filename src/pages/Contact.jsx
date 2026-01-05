@@ -16,19 +16,24 @@ function ContactPage() {
             message: event.target.message.value,
         };
 
-        const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (data.success) {
-            setResult("Email sent successfully!");
-            event.target.reset();
-        } else {
-            setResult("Failed to send email.");
+            if (data.success) {
+                setResult("Email sent successfully!");
+                event.target.reset();
+            } else {
+                setResult("Failed to send message.");
+            }
+        } catch (error) {
+            console.error(error);
+            setResult("Error submitting form.");
         }
     };
 

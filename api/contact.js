@@ -1,36 +1,39 @@
 export default async function handler(req, res) {
-  try {
     if (req.method !== "POST") {
-      return res.status(405).json({ message: "Method Not Allowed" });
+        return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    // Parse JSON body manually (REQUIRED for Vercel)
-    const body = await new Promise((resolve, reject) => {
-      let data = "";
-      req.on("data", chunk => (data += chunk));
-      req.on("end", () => resolve(JSON.parse(data)));
-      req.on("error", reject);
-    });
+    const ACCESS_KEY = process.env.ACCESS_KEY;  // BACKEND ONLY, HIDDEN
 
-    const access_key = process.env.ACCESS_KEY;
+    if (!ACCESS_KEY) {
+        return res.status(500).json({ message: "Access Key Missing" });
+    }
 
-    const formData = new URLSearchParams();
-    formData.append("access_key", access_key);
-    formData.append("name", body.name);
-    formData.append("email", body.email);
-    formData.append("message", body.message);
+    const { name, email, message } = req.body;
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: formData.toString(),
-    });
+    // Build payload for Web3Forms
+    const formData = {
+        access_key: ACCESS_KEY,
+        name,
+        email,
+        message,
+    };
 
-    const data = await response.json();
-    return res.status(200).json(data);
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
 
-  } catch (error) {
-    console.error("Server Error:", error);
-    return res.status(500).json({ message: "Server Error", error });
-  }
+        const data = await response.json();
+
+        if (data.success) {
+            return res.status(200).json({ success: true });
+        } else {
+            return res.status(400).json({ message: "Form submission failed" });
+        }
+    } catch (err) {
+        return res.status(500).json({ message: "Server error", error: err });
+    }
 }
