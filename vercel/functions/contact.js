@@ -1,29 +1,28 @@
-export const config = {
-  runtime: "edge",
-};
-
 export default async function handler(request) {
   if (request.method !== "POST") {
-    return new Response(JSON.stringify({ message: "Method Not Allowed" }), {
-      status: 405,
-    });
+    return new Response(
+      JSON.stringify({ message: "Method Not Allowed" }),
+      { status: 405 }
+    );
   }
 
   const ACCESS_KEY = process.env.ACCESS_KEY;
 
   if (!ACCESS_KEY) {
-    return new Response(JSON.stringify({ message: "Access Key Missing" }), {
-      status: 500,
-    });
+    return new Response(
+      JSON.stringify({ message: "Access Key Missing" }),
+      { status: 500 }
+    );
   }
 
   let body;
   try {
     body = await request.json();
   } catch (err) {
-    return new Response(JSON.stringify({ message: "Invalid JSON" }), {
-      status: 400,
-    });
+    return new Response(
+      JSON.stringify({ message: "Invalid JSON" }),
+      { status: 400 }
+    );
   }
 
   const { name, email, message } = body;
@@ -40,10 +39,10 @@ export default async function handler(request) {
       }),
     });
 
-    const result = await response.json();
+    const data = await response.json();
 
-    return new Response(JSON.stringify(result), {
-      status: result.success ? 200 : 400,
+    return new Response(JSON.stringify(data), {
+      status: data.success ? 200 : 400,
     });
   } catch (error) {
     return new Response(
