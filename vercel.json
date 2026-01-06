@@ -1,17 +1,8 @@
 {
-  "functions": {
-    "api/contact.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/contact",
-      "destination": "/vercel/functions/contact.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+    "rewrites":[
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
 }
