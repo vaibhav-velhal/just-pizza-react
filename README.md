@@ -44,7 +44,7 @@ Pages included:
 - Glassmorphism design  
 - Fully responsive  
 - Form submission **sends an email directly to the site owner**  
-- Email service is securely configured using **Vercel Environment Variables** (API keys are not exposed)
+- Email service is securely configured using **Vercel Environment Variables**
 
 ---
 
