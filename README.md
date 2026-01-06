@@ -1,16 +1,79 @@
-# React + Vite
+# 🍕 JustPizza – React Pizza Website
+Live Demo: https://just-pizza-official.vercel.app
+---
+A fully responsive, modern pizza website built using **React**, **React Router**, **Bootstrap**, and **CSS**.
+This project showcases a clean UI, smooth responsiveness, dynamic menu cards, and well-structured components — ideal for learning React and frontend development.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Features
+### ✅ Fully Responsive Design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Works smoothly on mobile, tablet, and desktop screens.
 
-## React Compiler
+### ✅ Dynamic Menu Page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Menu items come from a single MenuList.jsx file
 
-## Expanding the ESLint configuration
+- Automatically displayed using .map()
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Easy to add or remove pizza items
+
+### ✅ Navigation with React Router
+
+Pages included:
+
+- Home
+
+- Menu
+
+- About
+
+- Contact
+
+### ✅ Beautiful UI Components
+
+- Styled with Bootstrap + custom CSS
+
+- Uses React Icons
+
+- Includes image backgrounds, hover effects, and clean layout
+
+### ✅ Contact Form UI
+
+- Glassmorphism design  
+- Fully responsive  
+- Form submission **sends an email directly to the site owner**  
+- Email service is securely configured using **Vercel Environment Variables** (API keys are not exposed)
+
+---
+
+## 🛠️ Technologies Used
+- **React (Vite)** – Frontend framework  
+- **React Router** – Page navigation  
+- **Bootstrap** – Layout + styling  
+- **CSS** – Custom styles  
+- **React Icons** – UI icons  
+- **Vercel** – Deployment  
+- **Git & GitHub** – Version control
+
+---
+
+## 📸 Screenshots
+### 🏠 Home Page
+
+![Home_Page](/Screenshots/Home_Page.png)
+
+### 🍕 Menu Page
+
+![Menu_Page](/Screenshots/Menu_Page.png)
+
+### 📞 Contact Page
+
+![Contact_Page](/Screenshots/Contact_Page.png)
+
+---
+
+## 📬 Author
+**Vaibhav Velhal**  
+Frontend Developer
