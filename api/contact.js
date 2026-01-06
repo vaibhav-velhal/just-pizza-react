@@ -1,18 +1,33 @@
-export default async function handler(req, res) {
-    if (req.method !== "POST") {
-        return res.status(405).json({ message: "Method Not Allowed" });
+export default async function handler(request) {
+    if (request.method !== "POST") {
+        return new Response(
+            JSON.stringify({ message: "Method Not Allowed" }),
+            { status: 405 }
+        );
     }
 
-    const ACCESS_KEY = process.env.ACCESS_KEY;  // BACKEND ONLY, HIDDEN
+    const ACCESS_KEY = process.env.ACCESS_KEY;
 
     if (!ACCESS_KEY) {
-        return res.status(500).json({ message: "Access Key Missing" });
+        return new Response(
+            JSON.stringify({ message: "Access Key Missing" }),
+            { status: 500 }
+        );
     }
 
-    const { name, email, message } = req.body;
+    let body;
+    try {
+        body = await request.json();
+    } catch (err) {
+        return new Response(
+            JSON.stringify({ message: "Invalid JSON" }),
+            { status: 400 }
+        );
+    }
 
-    // Build payload for Web3Forms
-    const formData = {
+    const { name, email, message } = body;
+
+    const payload = {
         access_key: ACCESS_KEY,
         name,
         email,
@@ -20,20 +35,29 @@ export default async function handler(req, res) {
     };
 
     try {
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
+            body: JSON.stringify(payload),
         });
 
-        const data = await response.json();
+        const result = await res.json();
 
-        if (data.success) {
-            return res.status(200).json({ success: true });
+        if (result.success) {
+            return new Response(
+                JSON.stringify({ success: true }),
+                { status: 200 }
+            );
         } else {
-            return res.status(400).json({ message: "Form submission failed" });
+            return new Response(
+                JSON.stringify({ success: false }),
+                { status: 400 }
+            );
         }
-    } catch (err) {
-        return res.status(500).json({ message: "Server error", error: err });
+    } catch (e) {
+        return new Response(
+            JSON.stringify({ message: "Server error", e }),
+            { status: 500 }
+        );
     }
 }

@@ -44,10 +44,6 @@ form button {
         box-shadow: 1px 1px 20px 0.5px hsla(0, 0%, 0%, 0.5);
     }
 
-    form input, textarea {
-        opacity: 0.8;
-    }
-
     form button {
         width: 100%;
     }
