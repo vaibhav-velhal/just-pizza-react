@@ -1,4 +1,5 @@
 import React from "react";
+import pizzaLeft from "/pizzaLeft.jpg";
 import "../styles/Contact.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -30,9 +31,9 @@ function ContactPage() {
     };
 
     return (
-        <div id="row-div" className="row w-100 m-0">
-            <div className="col-6 p-0 pizza-left-img"></div>
-            <div id="form-div" className="col-md-6 p-0">
+        <div className="row w-100 m-0">
+            <div className="col-12 col-md-6 p-0 pizza-left-img"></div>
+            <div id="form-div" className="col-12 col-md-6 p-0">
                 <form onSubmit={onSubmit}>
                     <h4 className="text-center mb-3"><FaPhoneAlt className="mb-1 me-2" />Contact Us</h4>
                     <label htmlFor="name" className="form-label fw-semibold">Name:</label>
@@ -44,7 +45,7 @@ function ContactPage() {
                         placeholder="Enter your email" required />
 
                     <label htmlFor="message" className="form-label fw-semibold">Message:</label>
-                    <textarea rows="5" name="message" className="p-2 mb-3 h-25" required ></textarea>
+                    <textarea rows="5" name="message" className="p-2 mb-3" required ></textarea>
 
                     <button className="btn btn-dark" type="submit">Submit</button>
                     <span className="mt-2">{result}</span>
