@@ -1,12 +1,12 @@
-import Pepperoni from "/Pepperon Pizza.jpg";
-import Margherita from "/Margherita Pizza.jpg";
-import Vegan from "/Vegan Pizza.jpg";
-import Pineapple from "/Pineapple Pizza.jpg";
-import Farmhouse from "/Farmhouse Pizza.jpg";
-import ChickenTandoori from "/Chicken Tandoori Pizza.jpg";
-import PaneerTikka from "/Paneer Tikka Pizza.jpg";
-import BBQChicken from "/BBQ Chicken Pizza.jpeg";
-import VeggieDelight from "/Veggie Delight Pizza.jpg";
+import Pepperoni from "/Pepperon Pizza.webp";
+import Margherita from "/Margherita Pizza.webp";
+import Vegan from "/Vegan Pizza.webp";
+import Pineapple from "/Pineapple Pizza.webp";
+import Farmhouse from "/Farmhouse Pizza.webp";
+import ChickenTandoori from "/Chicken Tandoori Pizza.webp";
+import PaneerTikka from "/Paneer Tikka Pizza.webp";
+import BBQChicken from "/BBQ Chicken Pizza.webp";
+import VeggieDelight from "/Veggie Delight Pizza.webp";
 
 export const MenuList = [
     {
