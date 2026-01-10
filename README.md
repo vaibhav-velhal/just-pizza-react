@@ -1,4 +1,4 @@
-# 🍕 JustPizza – React Pizza Website
+# 🍕 JustPizza – A React Pizza Website
 Live Demo: https://just-pizza-official.vercel.app
 ---
 A fully responsive, modern pizza website built using **React**, **React Router**, **Bootstrap**, and **CSS**.
