@@ -6,10 +6,10 @@ function Footer() {
     return(
         <div className="footer mt-auto py-1 text-center text-light">
             <div className="social-links gap-4">
-                <a href="https://www.instagram.com/" className="text-light"><FaInstagram className="icon" />Instagram</a>
-                <a href="https://x.com/" className="text-light"><FaXTwitter className="icon" />X.com</a>
-                <a href="https://www.facebook.com/" className="text-light"><FaFacebook  className="icon"/>Facebook</a>
-                <a href="https://www.linkedin.com/" className="text-light"><FaLinkedin  className="icon"/>LinkedIn</a>
+                <a href="https://www.instagram.com/" target="_blank" className="text-light"><FaInstagram className="icon" />Instagram</a>
+                <a href="https://x.com/" target="_blank" className="text-light"><FaXTwitter className="icon" />X.com</a>
+                <a href="https://www.facebook.com/" target="_blank" className="text-light"><FaFacebook  className="icon"/>Facebook</a>
+                <a href="https://www.linkedin.com/" target="_blank" className="text-light"><FaLinkedin  className="icon"/>LinkedIn</a>
             </div>
             <hr className="m-2 mx-md-5 mx-3"/>
             <p className="m-0">&copy; {new Date().getFullYear()} <a href="/" className="text-light">JustPizza</a></p>
