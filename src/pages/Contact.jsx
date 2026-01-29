@@ -34,7 +34,7 @@ function ContactPage() {
         <div id="row-div" className="row w-100 m-0">
             <div className="col-12 col-md-6 p-0 pizza-left-img"></div>
             <div id="form-div" className="col-12 col-md-6 p-0">
-                <form onSubmit={onSubmit}>
+                <form onSubmit={onSubmit} className="my-md-5">
                     <h4 className="text-center mb-3"><FaPhoneAlt className="mb-1 me-2" />Contact Us</h4>
                     <label htmlFor="name" className="form-label fw-semibold">Name:</label>
                     <input type="text" name="name" className="form-control mb-3"
