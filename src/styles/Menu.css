@@ -21,9 +21,3 @@ img {
     cursor: pointer;
     box-shadow: 5px 5px 15px 5px hsla(0, 0%, 0%, 0.072);
 }
-
-@media (max-width: 767px) {   
-    .image-container {
-        height:175px;
-    }
-}

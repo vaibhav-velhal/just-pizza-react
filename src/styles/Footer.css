@@ -35,7 +35,7 @@
     margin-top: 3px;
 }
 
-.footer a:hover {
+.footer .social-links a:hover {
     transform: translateY(-5px);
 }
 
