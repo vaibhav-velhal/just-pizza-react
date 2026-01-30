@@ -25,8 +25,6 @@ Pages included:
 
 - Home
 
-- Menu
-
 - About
 
 - Contact
@@ -63,10 +61,6 @@ Pages included:
 ### 🏠 Home Page
 
 ![Home_Page](/Screenshots/Home_Page.png)
-
-### 🍕 Menu Page
-
-![Menu_Page](/Screenshots/Menu_Page.png)
 
 ### 📞 Contact Page
 

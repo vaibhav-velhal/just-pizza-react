@@ -1,5 +1,5 @@
 import '../styles/Home.css';
-import Menu from './Menu';
+import Menu from '../components/Menu';
 
 function Home() {
 
