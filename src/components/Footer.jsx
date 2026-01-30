@@ -20,7 +20,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-content-right">
-                    <h4 className="fw-semibold">Get in touch</h4>
+                    <h4 className="fw-semibold text-center">Get in touch</h4>
                     <p className="m-0"><IoCall className="mb-1" size={20} /> +91-705-820-4125</p>
                     <p className="m-0"><IoIosMail className="mb-1" size={22} /> contact@justpizza.com</p>
                     <div className="social-links mt-3">
