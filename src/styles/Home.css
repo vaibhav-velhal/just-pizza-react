@@ -1,3 +1,7 @@
+#home-page {
+    padding: 95px 48px;
+}
+
 .headerContainer {
     height: 70vh;
     background: url("/pizza.jpeg") no-repeat center center;
@@ -23,27 +27,23 @@
 
 
 @media (max-width: 767px) {
+    #home-page {
+        padding: 75px 16px 95px 16px;
+    }
+
     .headerContainer{
         justify-content: center;
     }
 
     .welcome-text {
-        /* width: clamp(280px, 85vw, 100vw); */
         margin-left: 15px;
-        /* border-radius: 10px; */
-        /* padding: 20px; */
-        /* background-color: hsla(206, 16%, 8%, 0.8); */
-        /* color: white; */
-        /* border: 1px solid hsla(0, 0%, 100%, 0.5); */
     }
 
     .headerContainer h1 {
         font-size: 40px;
-        /* color: white; */
     }
 
     .headerContainer p {
         font-size: 20px;
-        /* color: hsla(0, 0%, 100%, 0.5); */
     }
 }

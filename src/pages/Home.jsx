@@ -4,7 +4,7 @@ import Menu from '../components/Menu';
 function Home() {
 
     return(
-        <div id='home-page' className="container-fluid p-3 pb-5 p-md-5 pb-md-5 mb-5">
+        <div id='home-page' className="container-fluid">
             <div className="headerContainer rounded-3">
                 <div className="welcome-text">
                     <h1 className='m-0 fw-bold'>Welcome to JustPizza</h1>

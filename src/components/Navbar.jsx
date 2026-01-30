@@ -4,7 +4,7 @@ import "../styles/Navbar.css";
 function Navbar() {
 
     return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid mx-md-5">
                 <a href="/" className="navbar-brand text-light fw-semibold">
                     <img src="/JustPizza Logo.png" alt=""className="me-2 mb-1" style={{height: 30, width: 30}}/>JustPizza

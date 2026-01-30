@@ -1,4 +1,4 @@
-.row {
+#row-div {
     height: 100%;
 }
 
@@ -17,6 +17,10 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+form textarea {
+    resize: none;
 }
 
 form button {
@@ -39,7 +43,7 @@ form button {
         width: 85%;
         background-color: hsla(0, 0%, 82%, 0.4);
         border: 1px solid #6c757d;
-        border-radius: 6px;
+        border-radius: 20px;
         padding: 20px;
         box-shadow: 1px 1px 20px 0.5px hsla(0, 0%, 0%, 0.5);
     }
