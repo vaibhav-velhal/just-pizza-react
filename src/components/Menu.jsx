@@ -43,7 +43,7 @@ function Menu() {
               </div>
 
               <div className="card-body p-2 pt-3">
-                <h4 className="card-title mb-2">{item.name}</h4>
+                <h5 className="card-title mb-2">{item.name}</h5>
                 <p className="card-text">Price: {item.price} Rs.</p>
               </div>
             </div>
