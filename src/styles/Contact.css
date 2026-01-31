@@ -35,6 +35,7 @@ form button {
 
     .row .pizza-left-img {
         background: none;
+        display: none;
     }
 
     form {
