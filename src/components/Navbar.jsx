@@ -7,7 +7,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid mx-md-5">
                 <a href="/" className="navbar-brand text-light fw-semibold">
-                    <img src="/JustPizza Logo.png" alt=""className="me-2 mb-1" style={{height: 30, width: 30}}/>JustPizza
+                    <img src="/JustPizza Logo.png" alt=""className="me-2 mb-1" loading="lazy" style={{height: 30, width: 30}}/>JustPizza
                 </a>
                 <button className="navbar-toggler border-secondary border-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>

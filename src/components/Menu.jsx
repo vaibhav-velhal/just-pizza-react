@@ -39,7 +39,7 @@ function Menu() {
             <div className="card p-4 rounded-5">
 
               <div className="image-container rounded-4">
-                <img src={item.image} alt={item.name} className="card-img-top" />
+                <img src={item.image} alt={item.name} className="card-img-top" loading="lazy" />
               </div>
 
               <div className="card-body p-2 pt-3">
