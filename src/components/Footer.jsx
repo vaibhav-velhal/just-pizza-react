@@ -6,7 +6,7 @@ import '../styles/Footer.css';
 function Footer() {
 
     return(
-        <div className="footer pb-2 pt-4 text-light">
+        <footer className="footer pb-2 pt-4 text-light">
 
             <div className="footer-content">
                 <div className="footer-content-left">
@@ -37,7 +37,7 @@ function Footer() {
             <p className="m-0 text-center">
                 &copy; {new Date().getFullYear()} <a href="/" className="text-light">JustPizza.com</a> - All Rights Reserved
             </p>
-        </div>
+        </footer>
     )
 }
 
