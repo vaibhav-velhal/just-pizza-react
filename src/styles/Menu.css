@@ -1,6 +1,6 @@
 .row .col .card {
     border: 1px solid hsla(208, 7%, 46%, 0.12);
-    box-shadow: 5px 5px 15px 5px #00000015;
+    box-shadow: 5px 5px 20px hsla(0, 0%, 0%, 0.082);
 }
 
 .image-container {
@@ -17,7 +17,7 @@ img {
 
 .card:hover {
     border: 1px solid hsla(208, 7%, 46%, 0.4) !important;
-    background-color: hsl(210, 17%, 98%);
+    background-color: hsl(210, 17%, 99%);
     cursor: pointer;
-    box-shadow: 5px 5px 15px 5px hsla(0, 0%, 0%, 0.072);
+    box-shadow: 5px 5px 20px hsla(0, 0%, 0%, 0.072);
 }
