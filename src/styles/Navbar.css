@@ -8,3 +8,11 @@
     text-decoration: none;
     color: white;
 }
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+.navbar .active {
+    text-decoration: underline;
+}

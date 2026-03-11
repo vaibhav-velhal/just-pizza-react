@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -13,10 +13,12 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse justify-content-end gap-4" id="navbarNav">
-                    <li className="nav-item fw-semibold"><Link to="/">Home</Link></li>
-                    <li className="nav-item fw-semibold"><Link to="/about">About</Link></li>
-                    <li className="nav-item fw-semibold"><Link to="/contact">Contact</Link></li>
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul className="navbar-nav gap-1 gap-md-4 m-2 m-lg-0">
+                        <li className="nav-item fw-semibold"><NavLink to="/">Home</NavLink></li>
+                        <li className="nav-item fw-semibold"><NavLink to="/about">About</NavLink></li>
+                        <li className="nav-item fw-semibold"><NavLink to="/contact">Contact</NavLink></li>
+                    </ul>
                 </div>
             </div>
         </nav>
