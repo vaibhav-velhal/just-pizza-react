@@ -1,5 +1,5 @@
 import '../styles/Home.css';
-import Menu from '../components/Menu';
+import MenuSection from '../components/MenuSection';
 
 function Home() {
 
@@ -12,7 +12,7 @@ function Home() {
                 </div>
             </div>
             <div className="menuContainer">
-                <Menu />
+                <MenuSection />
             </div>
         </div>
     )

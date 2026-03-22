@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { MenuList } from "../helpers/MenuList";
+import { MenuList } from "../data/menuList";
 import { MdRestaurantMenu } from "react-icons/md";
 import "../styles/Menu.css";
 
