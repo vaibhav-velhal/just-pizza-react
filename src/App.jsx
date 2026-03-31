@@ -1,18 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from "./pages/Contact"
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
 
   return (
     <>
-      <Router>
-        <header>
-          <Navbar />
-        </header>
+      <header>
+        <Navbar />
+      </header>
+      <Suspense fallback={
+        <div className="text-center" style={{ marginTop: "80px" }}>
+          <div className="spinner-border" role="status"></div>
+        </div>
+      }>
         <main>
           <div className="main-content">
             <Routes>
@@ -22,8 +28,8 @@ function App() {
             </Routes>
           </div>
         </main>
-        <Footer />
-      </Router>
+      </Suspense>
+      <Footer />
     </>
   )
 }
