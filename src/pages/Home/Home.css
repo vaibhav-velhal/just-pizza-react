@@ -5,7 +5,7 @@
 
 .headerContainer {
     height: 70vh;
-    background: url("pizza-header-image.jpg") no-repeat center center;
+    background: url("./../../../public/pizza-header-image.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: end;
