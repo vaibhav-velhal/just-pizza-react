@@ -1,12 +1,12 @@
-import Pepperoni from "/Pepperon Pizza.webp";
-import Margherita from "/Margherita Pizza.webp";
-import Vegan from "/Vegan Pizza.webp";
-import Pineapple from "/Pineapple Pizza.webp";
-import Farmhouse from "/Farmhouse Pizza.webp";
-import ChickenTandoori from "/Chicken Tandoori Pizza.webp";
-import PaneerTikka from "/Paneer Tikka Pizza.webp";
-import BBQChicken from "/BBQ Chicken Pizza.webp";
-import VeggieDelight from "/Veggie Delight Pizza.webp";
+import Pepperoni from "./../assets/pepperoni-pizza.webp";
+import Margherita from "./../assets/margherita-pizza.webp";
+import Vegan from "./../assets/vegan-pizza.webp";
+import Pineapple from "./../assets/pineapple-pizza.webp";
+import Farmhouse from "./../assets/farmhouse-pizza.webp";
+import ChickenTandoori from "./../assets/chicken-tandoori-pizza.webp";
+import PaneerTikka from "./../assets/paneer-tikka-pizza.webp";
+import BBQChicken from "./../assets/bbq-chicken-pizza.webp";
+import VeggieDelight from "./../assets/veggie-delight-pizza.webp";
 
 export const MenuList = [
     {
