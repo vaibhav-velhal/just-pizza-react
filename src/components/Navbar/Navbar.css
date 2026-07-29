@@ -1,6 +1,24 @@
 .navbar {
-    background-color: #121619;
     color: white;
+}
+
+.dark-nav {
+    background-color: hsl(41, 87%, 69%);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.navbar .navbar-brand img {
+    border: 2px solid hsl(18, 92%, 45%);
+    border-radius: 50%;
+}
+
+.navbar .navbar-brand {
+    /* color: hsl(41, 87%, 69%); */
+    color: hsl(18, 92%, 45%);
+}
+
+.navbar .navbar-brand:hover {
+    color: hsl(18, 92%, 45%);
 }
 
 .navbar-collapse a, li {
@@ -9,8 +27,15 @@
     color: white;
 }
 
+.navbar-collapse a:hover {
+    color: black;
+    transition: all 0.5s ease 0s;
+}
+
 nav ul li:hover {
+    color: black;
     text-decoration: underline;
+    transition: all 0.5s ease 0s;
 }
 
 .navbar .active {

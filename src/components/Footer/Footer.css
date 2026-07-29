@@ -37,9 +37,9 @@
 }
 
 .footer .social-links a:hover {
-    color: #ff6302;
-    border: 1px solid #ff6302;
-    transform: translateY(-5px);
+    color: lightgray;
+    border: 1px solid lightgray;
+    transform: translateY(-4px);
     transition: all 0.3s ease 0s;
 }
 

@@ -33,16 +33,16 @@ function MenuSection() {
         </select>
       </div>
 
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-5">
         {sortedMenu.map((item, index) => (
           <div className="col" key={index}>
-            <div className="card p-4 rounded-5">
+            <div className="card rounded-4">
 
-              <div className="image-container rounded-4">
+              <div className="image-container rounded-top-4">
                 <img src={item.image} alt={item.name} className="card-img-top" loading="lazy" />
               </div>
 
-              <div className="card-body p-2 pt-3">
+              <div className="card-body mx-3 my-2">
                 <h5 className="card-title mb-2">{item.name}</h5>
                 <p className="card-text">Price: {item.price} Rs.</p>
               </div>

@@ -1,10 +1,11 @@
 #home-page {
-    padding: 95px 48px;
+    padding: 0;
+    padding-bottom: 95px;
 }
 
 .headerContainer {
     height: 70vh;
-    background: url("./../../../public/pizza.jpeg") no-repeat center center;
+    background: url("pizza-header-image.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: end;
@@ -12,17 +13,18 @@
 
 .welcome-text {
     margin-left: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 140px;
+    line-height: 1;
 }
 
 .headerContainer h1 {
-    color: #ff6302;
-    font-size: 80px;
+    color: hsl(18, 92%, 45%);
+    font-size: 58px;
 }
 
 .headerContainer p {
     color: hsl(0, 0%, 25%);
-    font-size: 35px;
+    font-size: 30px;
 }
 
 
