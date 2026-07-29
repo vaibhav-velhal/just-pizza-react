@@ -23,6 +23,7 @@
 }
 
 .footer .social-links a {
+    color: white;
     text-align: center;
     height: 32px;
     width: 32px;
@@ -36,9 +37,12 @@
 }
 
 .footer .social-links a:hover {
+    color: #ff6302;
+    border: 1px solid #ff6302;
     transform: translateY(-5px);
     transition: all 0.3s ease 0s;
 }
+
 
 @media (max-width: 767px) {
     .footer-content {

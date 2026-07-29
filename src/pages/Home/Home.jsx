@@ -1,5 +1,5 @@
-import '../styles/Home.css';
-import MenuSection from '../components/MenuSection';
+import './Home.css';
+import MenuSection from '../../components/MenuSection/MenuSection';
 
 function Home() {
 

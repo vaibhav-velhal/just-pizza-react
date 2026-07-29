@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import { MenuList } from "../data/menuList";
+import { MenuList } from "../../data/menuList";
 import { MdRestaurantMenu } from "react-icons/md";
-import "../styles/Menu.css";
+import "./MenuSection.css";
 
-function Menu() {
+function MenuSection() {
 
   const [sortType, setSortType] = useState("default");
 
@@ -55,4 +55,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default MenuSection;

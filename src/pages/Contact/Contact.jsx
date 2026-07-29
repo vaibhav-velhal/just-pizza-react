@@ -1,6 +1,6 @@
 import React from "react";
 import pizzaLeft from "/pizzaLeft.jpg";
-import "../styles/Contact.css";
+import "./Contact.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
 function ContactPage() {

@@ -1,7 +1,7 @@
 import { FaInstagram, FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
-import '../styles/Footer.css';
+import './Footer.css';
 
 function Footer() {
 
@@ -24,10 +24,10 @@ function Footer() {
                     <p className="m-0"><IoCall className="mb-1" size={20} /> +91-0123-456-789</p>
                     <p className="m-0"><IoIosMail className="mb-1" size={22} /> contact@justpizza.com</p>
                     <div className="social-links mt-3">
-                        <a href="https://www.instagram.com/" target="_blank" className="text-light"><FaInstagram className="icon" /></a>
-                        <a href="https://x.com/" target="_blank" className="text-light"><FaXTwitter className="icon" /></a>
-                        <a href="https://www.facebook.com/" target="_blank" className="text-light"><FaFacebook  className="icon"/></a>
-                        <a href="https://www.linkedin.com/" target="_blank" className="text-light"><FaLinkedin  className="icon"/></a>
+                        <a href="https://www.instagram.com/" target="_blank"><FaInstagram className="icon" /></a>
+                        <a href="https://x.com/" target="_blank"><FaXTwitter className="icon" /></a>
+                        <a href="https://www.facebook.com/" target="_blank"><FaFacebook  className="icon"/></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><FaLinkedin  className="icon"/></a>
                     </div>
                 </div>
             </div>

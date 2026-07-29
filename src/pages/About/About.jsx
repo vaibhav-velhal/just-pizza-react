@@ -1,5 +1,5 @@
 import MultiplePizzas from "/multiplePizzas.jpeg";
-import "../styles/About.css";
+import "./About.css";
 
 function About() {
 

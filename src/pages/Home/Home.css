@@ -4,7 +4,7 @@
 
 .headerContainer {
     height: 70vh;
-    background: url("/pizza.jpeg") no-repeat center center;
+    background: url("./../../../public/pizza.jpeg") no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: end;
@@ -16,7 +16,7 @@
 }
 
 .headerContainer h1 {
-    color: #E85D04;
+    color: #ff6302;
     font-size: 80px;
 }
 

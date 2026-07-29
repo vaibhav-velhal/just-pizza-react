@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const About = lazy(() => import("./pages/About/About"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
 
 function App() {
 
