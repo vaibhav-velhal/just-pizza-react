@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { MenuList } from "../../data/menuList";
 import { MdRestaurantMenu } from "react-icons/md";
-import "./MenuSection.css";
+import "./Menu.css";
 
 function MenuSection() {
 
@@ -18,7 +18,7 @@ function MenuSection() {
   });
 
   return (
-    <div id="menuPage" className="container mt-3">
+    <div id="menuPage" className="menu container mt-3">
 
       <h1 className="text-center mb-3">
         <MdRestaurantMenu className="mb-2 me-1" />

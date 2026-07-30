@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 
@@ -24,9 +25,26 @@ function Navbar() {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav gap-1 gap-md-4 m-2 m-lg-0">
-                        <li className="nav-item fw-semibold"><NavLink to="/">Home</NavLink></li>
-                        <li className="nav-item fw-semibold"><NavLink to="/about">About</NavLink></li>
-                        {/* <li className="nav-item fw-semibold"><NavLink to="/contact">Contact</NavLink></li> */}
+                        <li className="nav-item fw-semibold">
+                            {/* <NavLink to="/home"> */}
+                                <Link to="header" smooth={true} offset={0} duration={200}>Home</Link>
+                            {/* </NavLink> */}
+                        </li>
+                        <li className="nav-item fw-semibold">
+                            {/* <NavLink to="/menu"> */}
+                                <Link to="menu" smooth={true} offset={0} duration={200}>Menu</Link>
+                            {/* </NavLink> */}
+                        </li>
+                        <li className="nav-item fw-semibold">
+                            {/* <NavLink to="/about"> */}
+                                <Link to="about" smooth={true} offset={0} duration={200}>About</Link>
+                            {/* </NavLink> */}
+                        </li>
+                        <li className="nav-item fw-semibold">
+                            {/* <NavLink to="/contact"> */}
+                                <Link to="footer" smooth={true} offset={0} duration={200}>Contact</Link>
+                            {/* </NavLink> */}
+                        </li>
                     </ul>
                 </div>
             </div>
