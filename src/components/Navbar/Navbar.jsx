@@ -8,7 +8,7 @@ function Navbar() {
 
     useEffect(() => {
         window.addEventListener('scroll', ()=>{
-            window.scrollY > 300 ? setSticky(true) : setSticky(false);
+            window.scrollY > 100 ? setSticky(true) : setSticky(false);
         })
     }, [])
 
@@ -26,7 +26,7 @@ function Navbar() {
                     <ul className="navbar-nav gap-1 gap-md-4 m-2 m-lg-0">
                         <li className="nav-item fw-semibold"><NavLink to="/">Home</NavLink></li>
                         <li className="nav-item fw-semibold"><NavLink to="/about">About</NavLink></li>
-                        <li className="nav-item fw-semibold"><NavLink to="/contact">Contact</NavLink></li>
+                        {/* <li className="nav-item fw-semibold"><NavLink to="/contact">Contact</NavLink></li> */}
                     </ul>
                 </div>
             </div>
