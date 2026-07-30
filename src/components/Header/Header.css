@@ -1,51 +1,41 @@
-#home-page {
-    padding: 0;
-    padding-bottom: 95px;
+.header {
+    margin-bottom: 3rem;
 }
 
-.headerContainer {
+.header-container {
     height: 70vh;
     background: url("./../../../public/pizza-header-image.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
-    align-items: end;
+    align-items: center;
 }
 
 .welcome-text {
-    margin-left: 50px;
-    margin-bottom: 140px;
+    margin-left: 3.5rem;
     line-height: 1;
 }
 
-.headerContainer h1 {
+.header-container h1 {
     color: hsl(18, 92%, 45%);
     font-size: 58px;
 }
 
-.headerContainer p {
+.header-container p {
     color: hsl(0, 0%, 25%);
     font-size: 30px;
 }
 
 
 @media (max-width: 767px) {
-    #home-page {
-        padding: 75px 16px 95px 16px;
-    }
-
-    .headerContainer{
-        justify-content: center;
-    }
-
     .welcome-text {
-        margin-left: 15px;
+        margin-left: 1rem;
     }
-
-    .headerContainer h1 {
+    
+    .header-container h1 {
         font-size: 40px;
     }
 
-    .headerContainer p {
+    .header-container p {
         font-size: 20px;
     }
 }

@@ -1,5 +1,5 @@
 .about {
-    margin-bottom: 120px;
+    margin-bottom: 5rem;
 }
 
 /* .about-image {
@@ -8,10 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 } */
-
-.about .container h1 {
-    font-size: 40px;
-}
 
 .about .container p {
     text-align: justify;

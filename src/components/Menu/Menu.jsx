@@ -18,7 +18,7 @@ function MenuSection() {
   });
 
   return (
-    <div id="menuPage" className="menu container mt-3">
+    <div className="menu container mt-3">
 
       <h1 className="text-center mb-3">
         <MdRestaurantMenu className="mb-2 me-1" />
@@ -35,7 +35,7 @@ function MenuSection() {
 
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-5">
         {sortedMenu.map((item, index) => (
-          <div className="col" key={index}>
+          <div className="col d-flex justify-content-center" key={index}>
             <div className="card rounded-4">
 
               <div className="image-container rounded-top-4">

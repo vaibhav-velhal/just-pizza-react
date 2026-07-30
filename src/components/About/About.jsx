@@ -8,10 +8,10 @@ function About() {
         className="image-container about-image"
         style={{ backgroundImage: `url(${MultiplePizzas})` }}
       ></div> */}
-      <div className="container text-center mt-4">
+      <div className="container text-center">
         <h1 className="fw-normal">About Us</h1>
         <hr />
-        <p>
+        <p className="px-3 px-md-0">
           At JustPizza, we believe great pizza starts with quality ingredients
           and a passion for flavor. Every slice we serve is crafted with fresh
           dough, rich sauces, and premium toppings to deliver an unforgettable
