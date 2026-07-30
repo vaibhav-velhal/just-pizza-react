@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <nav className={`navbar navbar-expand-lg fixed-top ${sticky ? 'dark-nav' : ''}`}>
-            <div className="container-fluid mx-md-5">
+            <div className="container">
                 <a href="/" className="navbar-brand me-4 fs-4 fw-semibold">
                     <img src="./logo.png" alt=""className="me-2 mb-1" style={{height: 30, width: 30}}/>JustPizza
                 </a>
@@ -32,7 +32,7 @@ function Navbar() {
                         </li>
                         <li className="nav-item fw-semibold">
                             <NavLink to="/menu">
-                                <Link to="menu" smooth={true} offset={0} duration={200}>Menu</Link>
+                                <Link to="menu" smooth={true} offset={-60} duration={200}>Menu</Link>
                             </NavLink>
                         </li>
                         <li className="nav-item fw-semibold">

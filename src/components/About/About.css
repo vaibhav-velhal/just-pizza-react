@@ -1,5 +1,5 @@
 .about {
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 
 /* .about-image {
@@ -9,7 +9,7 @@
     background-size: cover;
 } */
 
-.about .container p {
+.about p {
     text-align: justify;
     text-indent: 40px;
 }
