@@ -1,5 +1,5 @@
 .about {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 }
 
 /* .about-image {
@@ -9,7 +9,29 @@
     background-size: cover;
 } */
 
-.about p {
+.about .about-content .image-container {
+    position: relative;
+    height: 250px;
+    width: 80%;
+}
+
+.about .about-content .image-container img {
+    opacity: 0.6;
+}
+
+.about .about-content p {
     text-align: justify;
     text-indent: 40px;
+    border-left: 5px solid hsl(41, 87%, 69%);
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .about .about-content .image-container {
+        height: 420px;
+        width: 95%;
+    }
 }
