@@ -6,7 +6,7 @@ import './Footer.css';
 function Footer() {
 
     return(
-        <footer className="footer pb-2 pt-4 text-light">
+        <footer id="footer" className="footer pb-2 pt-4 text-light">
 
             <div className="footer-content">
                 <div className="footer-content-left">

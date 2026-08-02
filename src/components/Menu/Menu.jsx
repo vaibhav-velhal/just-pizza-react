@@ -18,7 +18,7 @@ function MenuSection() {
   });
 
   return (
-    <div className="menu container">
+    <div id="menu" className="menu container">
 
       <h1 className="text-center mb-3">
         <MdRestaurantMenu className="mb-2 me-1" />
