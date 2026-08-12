@@ -33,7 +33,7 @@ function MenuSection() {
         </select>
       </div>
 
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-5">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5">
         {sortedMenu.map((item, index) => (
           <div className="col d-flex justify-content-center" key={index}>
             <div className="card rounded-4">

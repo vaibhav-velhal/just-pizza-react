@@ -28,7 +28,7 @@ function About() {
       
       {/* Design 2 */}
       <div className="about-content d-flex justify-content-center">
-          <div className="image-container mt-3 rounded-4">
+          <div className="image-container mt-3 rounded-3">
             <img src={MultiplePizzas} alt="about-image" />
             <p className="about-desc pb-0 pb-md-2 px-3 mx-3 rounded-4">
               At JustPizza, we believe great pizza starts with quality ingredients

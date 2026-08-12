@@ -4,7 +4,7 @@
 
 .menu .row .col .card {
     height: 321px;
-    width: 90%;
+    width: 100%;
     border: 1px solid hsla(208, 7%, 46%, 0.12);
     box-shadow: 5px 5px 20px hsla(0, 0%, 0%, 0.082);
 }
@@ -21,7 +21,7 @@ img {
     object-fit:cover;
 }
 
-.card:hover {
+.menu .card:hover {
     background-color: hsl(210, 17%, 99%);
     cursor: pointer;
     box-shadow: 5px 5px 20px hsla(0, 0%, 0%, 0.072);

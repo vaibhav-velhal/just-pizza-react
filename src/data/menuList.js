@@ -6,7 +6,7 @@ import Farmhouse from "./../assets/farmhouse-pizza.webp";
 import ChickenTandoori from "./../assets/chicken-tandoori-pizza.webp";
 import PaneerTikka from "./../assets/paneer-tikka-pizza.webp";
 import BBQChicken from "./../assets/bbq-chicken-pizza.webp";
-import VeggieDelight from "./../assets/veggie-delight-pizza.webp";
+// import VeggieDelight from "./../assets/veggie-delight-pizza.webp";
 
 export const MenuList = [
     {
@@ -49,9 +49,9 @@ export const MenuList = [
         image: BBQChicken,
         price: 350,
     },
-    {
-        name: "Veggie Delight Pizza",
-        image: VeggieDelight,
-        price: 190,
-    },
+    // {
+    //     name: "Veggie Delight Pizza",
+    //     image: VeggieDelight,
+    //     price: 190,
+    // },
 ]

@@ -11,18 +11,18 @@
 }
 
 .welcome-text {
-    margin-left: clamp(1rem, 8vw, 7.5rem);
+    margin-left: clamp(0.9rem, 8vw, 7.5rem);
     line-height: 1;
 }
 
 .header-container h1 {
     color: hsl(18, 92%, 45%);
-    font-size: clamp(1.6rem, 5vw, 3.7rem);
+    font-size: clamp(1.8rem, 5vw, 3.7rem);
 }
 
 .header-container p {
     color: hsl(0, 0%, 25%);
-    font-size: clamp(1rem, 3vw, 1.9rem);
+    font-size: clamp(1.2rem, 3vw, 1.9rem);
 }
 
 

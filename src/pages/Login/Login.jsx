@@ -1,12 +1,37 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { loginUser } from "../../services/auth/auth.api.js";
 
 function Login() {
     
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
+    // Handle login
+    const handleLogin = async (event) => {
+        event.preventDefault();
+
+        try {
+            const user = await loginUser(email, password);
+
+            localStorage.setItem("token", JSON.stringify(user.token));
+
+            if(user.token && user.msg === "User is logged in!"){
+                alert("Login successful");
+                navigate("/");
+            }else{
+                alert("Login failed");
+            }
+        } catch(error) {
+            if (!navigator.onLine) {
+                alert("Please check your internet connection");
+            } else {
+                alert(error.message || "Login failed");
+            }
+            console.error("Login failed:", error);
+        }
+    }
 
     return(
         <main className="h-100">
@@ -15,7 +40,8 @@ function Login() {
                     <h1 className="text-center">Login</h1>
                     <form
                         action="#"
-                        // onSubmit={handleLogin}
+                        onSubmit={handleLogin}
+                        method="POST"
                     >
                         <div className="card px-2 py-3 shadow-sm rounded-4">
                             <div className="card-body">
@@ -50,10 +76,17 @@ function Login() {
                                         required
                                     />
                                 </div>
-                                <div className="login-button text-center">
+                                <div className="login-button mb-3 text-center">
                                     <button className="btn btn-primary" type="submit">
                                         Login
                                     </button>
+                                </div>
+                                <div className="desc text-center">
+                                    <p className="m-0">
+                                        Don't have account?{" "}
+                                        <a href="/register">Register here</a>
+                                    </p>
+                                    <small><a href="/">Return to Home</a></small>                                    
                                 </div>
                             </div>
                         </div>
