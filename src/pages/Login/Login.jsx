@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../services/auth/auth.api.js";
+import './Login.css';
 
 function Login() {
     
@@ -34,16 +35,16 @@ function Login() {
     }
 
     return(
-        <main className="h-100">
-            <div className="login-page h-100 d-flex justify-content-center align-items-center">
-                <div>
-                    <h1 className="text-center">Login</h1>
+        <main>
+            <div className="login-page d-flex">
+                <div className="login-container">
+                    <h1 className="text-center text-light">Login</h1>
                     <form
                         action="#"
                         onSubmit={handleLogin}
                         method="POST"
                     >
-                        <div className="card px-2 py-3 shadow-sm rounded-4">
+                        <div className="card px-2 py-3 shadow rounded-4">
                             <div className="card-body">
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">
@@ -77,15 +78,17 @@ function Login() {
                                     />
                                 </div>
                                 <div className="login-button mb-3 text-center">
-                                    <button className="btn btn-primary" type="submit">
+                                    <button className="btn btn-success rounded-pill px-5" type="submit">
                                         Login
                                     </button>
                                 </div>
                                 <div className="desc text-center">
-                                    <p className="m-0">
-                                        Don't have account?{" "}
-                                        <a href="/register">Register here</a>
-                                    </p>
+                                    <small>
+                                        <p className="m-0">
+                                            Don't have account?{" "}
+                                            <a href="/register">Register here</a>
+                                        </p>
+                                    </small>
                                     <small><a href="/">Return to Home</a></small>                                    
                                 </div>
                             </div>

@@ -146,7 +146,7 @@ function Register() {
                     <div className="desc text-center">
                         <p className="m-0">
                             Already have an account?{" "}
-                            <a href="/">Login here</a>
+                            <a href="/login">Login here</a>
                         </p>
                     </div>
                     </form>
