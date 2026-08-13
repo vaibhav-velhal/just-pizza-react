@@ -36,7 +36,7 @@ function Login() {
 
     return(
         <main>
-            <div className="login-page d-flex">
+            <div className="login-page">
                 <div className="login-container">
                     <h1 className="text-center text-light">Login</h1>
                     <form

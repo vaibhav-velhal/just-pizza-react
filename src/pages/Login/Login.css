@@ -1,11 +1,13 @@
 .login-page {
-    min-height: 100vh;
+    height: 100vh;
     background: url("./../../../public/pizza-login-image.jpg") no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-page .login-container {
-    margin-top: 4rem;
-    margin-left: 13rem;
+    margin-right: 40%;
 }
 
 .login-page .card {
@@ -30,4 +32,12 @@
 
 .login-page .login-button .btn:hover {
     text-decoration: underline;
+}
+
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .login-page .login-container {
+        margin-right: 0;
+    }
 }
