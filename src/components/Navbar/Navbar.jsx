@@ -27,7 +27,7 @@ function Navbar() {
 
     return (
         <nav className={`navbar navbar-expand-lg fixed-top ${sticky ? 'dark-nav' : ''}`}>
-            <div className="container">
+            <div className="container px-4 px-md-0">
                 <a href="/home" className="navbar-brand me-4 fs-4 fw-semibold">
                     <img src="./logo.png" alt=""className="me-1 mb-2" style={{height: 30, width: 30}}/>JustPizza
                 </a>

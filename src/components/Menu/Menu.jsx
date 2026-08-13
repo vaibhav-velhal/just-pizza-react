@@ -44,7 +44,7 @@ function MenuSection() {
 
               <div className="card-body mx-3 my-2">
                 <h5 className="card-title mb-2">{item.name}</h5>
-                <p className="card-text">Price: {item.price} Rs.</p>
+                <p className="card-text">{"\u20B9"} {item.price}</p>
               </div>
             </div>
           </div>
