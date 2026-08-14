@@ -1,4 +1,4 @@
-.login-page {
+.register-page {
     height: 100vh;
     background: url("./../../../public/pizza-auth-image.jpg") no-repeat center center;
     display: flex;
@@ -6,38 +6,38 @@
     align-items: center;
 }
 
-.login-page .login-container {
+.register-page .registration-container {
     margin-right: 40%;
 }
 
-.login-page .card {
+.register-page .card {
     color: white;
     background-color: transparent;
     backdrop-filter: blur(5px);
 }
 
-.login-page form input {
+.register-page form input {
     color: white;
     background-color: transparent;
 }
 
-.login-page form input:focus {
+.register-page form input:focus {
     color: white;
     background-color: transparent;
 }
 
-.login-page form input::placeholder {
+.register-page form input::placeholder {
     color: white;
 }
 
-.login-page .login-button .btn:hover {
+.register-page .register-button .btn:hover {
     text-decoration: underline;
 }
 
 
 /* Media Queries */
 @media (max-width: 767px) {
-    .login-page .login-container {
+    .register-page .registration-container {
         margin-right: 0;
     }
 }

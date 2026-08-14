@@ -19,6 +19,8 @@ function Login() {
             localStorage.setItem("token", JSON.stringify(user.token));
 
             if(user.token && user.msg === "User is logged in!"){
+                setEmail("");
+                setPassword("");
                 alert("Login successful");
                 navigate("/");
             }else{
@@ -39,11 +41,7 @@ function Login() {
             <div className="login-page">
                 <div className="login-container">
                     <h1 className="text-center text-light">Login</h1>
-                    <form
-                        action="#"
-                        onSubmit={handleLogin}
-                        method="POST"
-                    >
+                    <form onSubmit={handleLogin} method="POST">
                         <div className="card px-2 py-3 shadow rounded-4">
                             <div className="card-body">
                                 <div className="mb-3">
