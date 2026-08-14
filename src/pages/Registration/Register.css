@@ -1,5 +1,5 @@
 .register-page {
-    height: 100vh;
+    min-height: 100vh;
     background: url("./../../../public/pizza-auth-image.jpg") no-repeat center center;
     display: flex;
     justify-content: center;
