@@ -20,13 +20,13 @@ function Home() {
                     <div className="spinner-border" role="status"></div>
                 </div>
             }>
-            <main>
-                <div className="main-content">
-                    <Header />
-                    <Menu />
-                    <About />
-                </div>
-            </main>
+                <main>
+                    <div className="main-content">
+                        <Header />
+                        <Menu />
+                        <About />
+                    </div>
+                </main>
             </Suspense>            
             <Footer />
         </>
