@@ -2,6 +2,10 @@
     color: white;
 }
 
+#header, #menu, #about {
+    scroll-margin-top: 80px;
+}
+
 .dark-nav {
     background-color: hsl(41, 87%, 69%);
     transition: all 0.5s ease-in-out 0s;

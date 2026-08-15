@@ -1,9 +1,6 @@
 import { Suspense, lazy } from 'react';
 import Navbar from './../../components/Navbar/Navbar';
 import Footer from './../../components/Footer/Footer';
-// import Header from './../../components/Header/Header';
-// import Menu from './../../components/Menu/Menu';
-// import About from './../../components/About/About';
 
 const Header = lazy(() => import("./../../components/Header/Header"));
 const Menu = lazy(() => import("./../../components/Menu/Menu"));
