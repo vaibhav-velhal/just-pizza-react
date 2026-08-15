@@ -12,7 +12,17 @@
 
 .welcome-text {
     margin-left: clamp(0.9rem, 8vw, 7.5rem);
-    line-height: 1;
+    line-height: 1;    
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .header-container h1 {
