@@ -86,7 +86,7 @@ function Navbar() {
                                 token ? 
                                     <button className="auth-btn btn btn-outline-light rounded-pill px-3 py-1" type="button" onClick={handleLogout}>Logout</button>
                                 :
-                                    <NavLink className="auth-btn btn btn-outline-light rounded-pill px-3 py-1" to="/login">Sign In</NavLink>
+                                    <NavLink className="auth-btn btn btn-outline-light rounded-pill px-3 py-1" to="/login">Login</NavLink>
                             }
                         </li>
                     </ul>

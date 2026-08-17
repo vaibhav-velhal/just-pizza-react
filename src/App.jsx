@@ -15,8 +15,9 @@ function App() {
         <Route
           path="*"
           element={
-            <div>
-              <h2 className="text-center mt-3">404 - No page found</h2>
+            <div className="container text-center">
+              <h2 className="mt-3">404 - No page found</h2>
+              <a href="/">Return to Home</a>
             </div>
           }
         />
