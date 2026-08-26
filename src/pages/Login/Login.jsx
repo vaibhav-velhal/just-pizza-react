@@ -14,25 +14,26 @@ function Login() {
         event.preventDefault();
 
         try {
-            const user = await loginUser(email, password);
+            const res = await loginUser(email, password);
 
-            localStorage.setItem("token", JSON.stringify(user.token));
+            localStorage.setItem("token", JSON.stringify(res.token));
+            localStorage.setItem("userId", res.userId);
 
-            if(user.token && user.msg === "User is logged in!"){
+            if(res.token){
                 setEmail("");
                 setPassword("");
                 alert("Login successful");
                 navigate("/");
             }else{
-                alert("Login failed");
+                alert(res.msg || "Login failed");
             }
         } catch(error) {
             if (!navigator.onLine) {
                 alert("Please check your internet connection");
             } else {
                 alert(error.message || "Login failed");
+                console.error("Login failed:", error);
             }
-            console.error("Login failed:", error);
         }
     }
 

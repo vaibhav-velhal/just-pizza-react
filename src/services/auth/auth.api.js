@@ -15,13 +15,9 @@ export const loginUser = async (email, password) => {
         
         const data = await res.json();
 
-        if(!res.ok){
-            throw new Error("Login failed");
-        }
-
         return data;
+
     } catch(error) {
-        console.error(error);
         throw error;
     }
 }
@@ -44,7 +40,6 @@ export const registerUser = async (userData) => {
 
         return res.json()
     } catch(error) {
-        console.error(error);
         throw error;
     }
 

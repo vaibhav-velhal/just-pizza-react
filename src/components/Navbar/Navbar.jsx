@@ -5,6 +5,7 @@ import { IoPerson } from "react-icons/io5";
 
 function Navbar() {
     const token = JSON.parse(localStorage.getItem("token"));
+    const userId = localStorage.getItem("userId");
 
     const [sticky, setSticky] = useState(false);
     const navigate = useNavigate();
@@ -17,6 +18,7 @@ function Navbar() {
 
         if(confirmLogout) {
             localStorage.removeItem("token");
+            localStorage.removeItem("userId");
             navigate("/");
         }
     };
@@ -37,7 +39,7 @@ function Navbar() {
         <nav className={`navbar navbar-expand-lg fixed-top ${sticky ? 'dark-nav' : ''} ${isHomePage ? '': 'dark-nav'}`}>
             <div className="container px-4 px-md-0">
                 <a href="/" className="navbar-brand me-4 fs-4 fw-semibold">
-                    <img src="./logo.png" alt=""className="me-1 mb-2" style={{height: 30, width: 30}}/>JustPizza
+                    <img src="./../../../public/logo.png" alt=""className="me-1 mb-2" style={{height: 30, width: 30}}/>JustPizza
                 </a>
                 <button className="navbar-toggler border-secondary border-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>
@@ -61,7 +63,7 @@ function Navbar() {
                                     <a href="#footer">Contact</a>
                                 </li>
                                 <li className="nav-item fw-semibold">
-                                    <NavLink to="/account">
+                                    <NavLink to={`/account/${userId}`}>
                                             <IoPerson className="fs-5 mb-1 me-1" />Account
                                     </NavLink>
                                 </li>
@@ -72,7 +74,7 @@ function Navbar() {
                                         <NavLink to="/">Home</NavLink>
                                     </li>
                                     <li className="nav-item fw-semibold">
-                                        <NavLink to="/account">
+                                        <NavLink to={`/account/${userId}`}>
                                             <IoPerson className="fs-5 mb-1 me-1" />Account
                                         </NavLink>
                                     </li>
