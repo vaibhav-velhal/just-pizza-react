@@ -1,0 +1,48 @@
+.account-page {
+    min-height: 80vh;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    background: url(./../../assets/profile-bg-image.jpg) no-repeat center center;
+    position: relative;
+}
+
+.account-page .user-details {
+  position: absolute;
+  left: 15rem;
+  top: 3rem;
+}
+
+.account-page .user-details .card {
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+    color: white;
+}
+
+.user-details .card .card-body {
+    padding: 2.5rem 1.7rem;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.user-details .card .btn-section .edit-btn:hover {
+  text-decoration: underline !important;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .account-page {
+    width: 95% !important;
+  }
+  .account-page .user-details {
+    position: static;
+  }
+}
