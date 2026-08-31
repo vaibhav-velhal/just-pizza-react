@@ -39,7 +39,7 @@ function Navbar() {
         <nav className={`navbar navbar-expand-lg fixed-top ${sticky ? 'dark-nav' : ''} ${isHomePage ? '': 'dark-nav'}`}>
             <div className="container px-4 px-md-0">
                 <a href="/" className="navbar-brand me-4 fs-4 fw-semibold">
-                    <img src="./../../../public/logo.png" alt=""className="me-1 mb-2" style={{height: 30, width: 30}}/>JustPizza
+                    <img src="./../../../logo.png" alt=""className="me-1 mb-2" style={{height: 30, width: 30}}/>JustPizza
                 </a>
                 <button className="navbar-toggler border-secondary border-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>
