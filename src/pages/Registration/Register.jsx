@@ -68,6 +68,10 @@ function Register() {
                                         name="firstName"
                                         className="form-control"
                                         placeholder="First Name"
+                                        title="Enter your first name."
+                                        minLength={2}
+                                        maxLength={20}
+                                        pattern="[A-Za-z ]+"
                                         value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)}
                                         required
@@ -81,6 +85,10 @@ function Register() {
                                         name="lastName"
                                         className="form-control"
                                         placeholder="Last Name"
+                                        title="Enter your last name."
+                                        minLength={2}
+                                        maxLength={20}
+                                        pattern="[A-Za-z ]+"
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
                                         required
@@ -92,10 +100,11 @@ function Register() {
                                     <label htmlFor="age" className="form-label">Age</label>
                                     <input
                                         id="age"
-                                        type="text"
+                                        type="number"
                                         name="age"
                                         className="form-control"
-                                        placeholder="Enter Your Age"
+                                        placeholder="Age"
+                                        title="Enter your age."
                                         min={18}
                                         max={65}
                                         value={age}
@@ -111,6 +120,10 @@ function Register() {
                                         name="country"
                                         className="form-control"
                                         placeholder="Enter Your Country"
+                                        title="Enter your country."
+                                        minLength={3}
+                                        maxLength={28}
+                                        pattern="[A-Za-z ]+"
                                         value={country}
                                         onChange={(e) => setCountry(e.target.value)}
                                         required
@@ -126,19 +139,24 @@ function Register() {
                                     name="email"
                                     className="form-control"
                                     placeholder="Enter Your Email"
+                                    title="Enter your valid email."
+                                    maxLength={30}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
                                 </div>
                                 <div className="password">
-                                <label htmlFor="password" className="form-label">Password</label>
+                                <label htmlFor="password" className="form-label">Create a Password</label>
                                 <input
                                     id="password"
                                     type="password"
                                     name="password"
                                     className="form-control"
-                                    placeholder="Enter Your Password"
+                                    placeholder="Create a Password"
+                                    title="Password must be 8-20 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
+                                    minLength={8} maxLength={12}
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required

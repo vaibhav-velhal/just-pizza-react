@@ -54,9 +54,11 @@ function Login() {
                                         type="email"
                                         name="email"
                                         className="form-control"
+                                        placeholder="Enter your email"
+                                        title="Enter your valid email."
+                                        maxLength={30}
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Enter your email"
                                         required
                                     />
                                 </div>
@@ -70,9 +72,12 @@ function Login() {
                                         type="password"
                                         name="password"
                                         className="form-control"
+                                        placeholder="Enter your password"
+                                        title="Password must be 8-20 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
+                                        minLength={8} maxLength={12}
+                                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
-                                        placeholder="Enter your password"
                                         required
                                     />
                                 </div>
