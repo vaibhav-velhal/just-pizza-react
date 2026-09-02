@@ -75,7 +75,7 @@ function Login() {
                                         placeholder="Enter your password"
                                         title="Password must be 8-20 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
                                         minLength={8} maxLength={12}
-                                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}"
+                                        // pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         required

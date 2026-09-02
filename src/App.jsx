@@ -3,15 +3,18 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Registration/Register";
 import Home from "./pages/Home/Home";
 import Account from "./pages/Account/Account";
+import DefaultTemplate from "./DefaultTemplate";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/account/:userId" element={<Account />} />
+        <Route path="/" element={<DefaultTemplate />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/account/:userId" element={<Account />} />
+        </Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register />} />        
         <Route
           path="*"
           element={
