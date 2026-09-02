@@ -38,15 +38,24 @@ function Login() {
     }
 
     return(
-        <main>
-            <div className="login-page">
-                <div className="login-container">
-                    <h1 className="text-center text-light">Login</h1>
-                    <form onSubmit={handleLogin} method="POST">
-                        <div className="card px-2 py-3 shadow rounded-4">
-                            <div className="card-body">
-                                <div className="mb-3">
-                                    <label htmlFor="email" className="form-label">
+        <>
+            <div className="row m-0 login-page">
+                <div className="col-md-7 col-12 login-container d-flex flex-column justify-content-center">
+                    <section>
+                        <h1 className="text-center mb-1 fs-2">
+                            <img src="./../../../public/logo.png" alt="JustPizza-logo" className="mb-2" style={{height: 30, width: 30}}/>
+                            JustPizza
+                        </h1>
+                        <h2 className="text-center fs-1">Welcome Back!</h2>
+                        <p className="text-center mb-4 text-secondary">Login to your account</p>
+                    </section>
+
+                    <section>
+                        <div className="form-container">
+                            <form onSubmit={handleLogin} method="POST">
+
+                                <div className="email-input-box mb-3">
+                                    <label htmlFor="email" className="form-label fw-semibold">
                                         Email
                                     </label>
                                     <input
@@ -62,9 +71,9 @@ function Login() {
                                         required
                                     />
                                 </div>
-
-                                <div className="mb-4">
-                                    <label htmlFor="password" className="form-label">
+                                
+                                <div className="password-input-box mb-4">
+                                    <label htmlFor="password" className="form-label fw-semibold">
                                         Password
                                     </label>
                                     <input
@@ -81,26 +90,21 @@ function Login() {
                                         required
                                     />
                                 </div>
-                                <div className="login-button mb-3 text-center">
-                                    <button className="btn btn-success rounded-pill px-5" type="submit">
-                                        Login
-                                    </button>
+
+                                <button className="btn text-light mb-3 w-100" type="submit">
+                                    Login
+                                </button>
+
+                                <div className="desc text-center">                                    
+                                    <p className="text-secondary mb-1">Don't have account? <a href="/register">Register here</a></p>                                    
+                                    <a href="/">Return to Home</a>                                    
                                 </div>
-                                <div className="desc text-center">
-                                    <small>
-                                        <p className="m-0">
-                                            Don't have account?{" "}
-                                            <a href="/register">Register here</a>
-                                        </p>
-                                    </small>
-                                    <small><a href="/">Return to Home</a></small>                                    
-                                </div>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </section>
                 </div>
             </div>
-        </main>
+        </>
     )
 }
 
