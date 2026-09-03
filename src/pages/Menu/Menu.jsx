@@ -3,7 +3,7 @@ import { MenuList } from "../../data/menuList";
 import { MdRestaurantMenu } from "react-icons/md";
 import "./Menu.css";
 
-function MenuSection() {
+function Menu() {
 
   const [sortType, setSortType] = useState("default");
 
@@ -55,4 +55,4 @@ function MenuSection() {
   );
 }
 
-export default MenuSection;
+export default Menu;

@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Registration/Register";
 import Home from "./pages/Home/Home";
+import Menu from "./pages/Menu/Menu"
+import About from "./pages/About/About";
 import Account from "./pages/Account/Account";
 import DefaultTemplate from "./DefaultTemplate";
 
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultTemplate />}>
           <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/about" element={<About />} />
           <Route path="/account/:userId" element={<Account />} />
         </Route>
         <Route path="/login" element={<Login />} />
