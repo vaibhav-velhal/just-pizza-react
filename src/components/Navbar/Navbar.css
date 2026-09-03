@@ -1,51 +1,30 @@
-.navbar {
-    color: white;
-}
-
-#header, #menu, #about {
-    scroll-margin-top: 80px;
-}
-
-.dark-nav {
-    background-color: hsl(41, 87%, 69%);
-    transition: all 0.5s ease-in-out 0s;
-}
-
-.navbar .navbar-brand img {
-    border: 2px solid hsl(18, 92%, 45%);
-    border-radius: 50%;
-}
-
-.navbar .navbar-brand {
-    /* color: hsl(41, 87%, 69%); */
-    color: hsl(18, 92%, 45%);
-}
-
-.navbar .navbar-brand:hover {
-    color: hsl(18, 92%, 45%);
-}
-
 .navbar-collapse li a {
     cursor: pointer;
 }
 
-.navbar-collapse a, li {
+.navbar-collapse a, .navbar-collapse li {
     list-style-type: none;
     text-decoration: none;
-    color: white;
-}
-
-.navbar-collapse a:hover {
     color: black;
-    transition: all 0.5s ease 0s;
-}
-
-nav ul li:hover {
-    color: black;
-    text-decoration: underline;
-    transition: all 0.5s ease 0s;
 }
 
 .navbar-nav a.active {
+    color: #df2620;
     text-decoration: underline;
+}
+
+.navbar-nav .account-btn {
+    background-color: #df2620;
+}
+
+.navbar-nav .account-btn:hover {
+    background-color: #c9221d;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
 }
