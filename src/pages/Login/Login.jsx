@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../../services/auth/auth.api.js";
 import './Login.css';
 
@@ -43,11 +43,11 @@ function Login() {
                 <div className="col-md-7 col-12 login-container d-flex flex-column justify-content-center">
                     <section>
                         <h1 className="text-center mb-1 fs-2">
-                            <img src="./../../../public/logo.png" alt="JustPizza-logo" className="mb-2" style={{height: 30, width: 30}}/>
+                            <img src="./../../../logo.png" alt="JustPizza-logo" className="mb-2" style={{height: 30, width: 30}}/>
                             JustPizza
                         </h1>
                         <h2 className="text-center fs-1">Welcome Back!</h2>
-                        <p className="text-center mb-4 text-secondary">Login to your account</p>
+                        <p className="text-center mb-md-5 mb-4 text-secondary">Login to your account</p>
                     </section>
 
                     <section>
@@ -96,8 +96,8 @@ function Login() {
                                 </button>
 
                                 <div className="desc text-center">                                    
-                                    <p className="text-secondary mb-1">Don't have account? <a href="/register">Register here</a></p>                                    
-                                    <a href="/">Return to Home</a>                                    
+                                    <p className="text-secondary mb-1">Don't have account? <Link to="/register">Register here</Link></p>                                    
+                                    <Link to="/">Return to Home</Link>
                                 </div>
                             </form>
                         </div>

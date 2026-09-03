@@ -24,3 +24,10 @@
     text-decoration: underline;
     background-color: hsl(18, 92%, 45%);
 }
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .login-page .form-container {
+        margin: 0 1rem;
+    }
+}

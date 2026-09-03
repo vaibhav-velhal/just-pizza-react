@@ -1,44 +1,33 @@
-.register-page {
-    min-height: 100vh;
-    background: url("./../../../public/pizza-auth-image.jpg") no-repeat center center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.registration-page {
+    /* min-height: 100vh; */
+    background-image: url("./../../../public/pizza-auth-image.jpg");
 }
 
-.register-page .registration-container {
-    margin-right: 40%;
+.registration-page .registration-container {
+    background-color: white;
 }
 
-.register-page .card {
-    color: white;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
+.registration-page .form-container {
+    margin: 0 10rem;
 }
 
-.register-page form input {
-    color: white;
-    background-color: transparent;
+.registration-page input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
-.register-page form input:focus {
-    color: white;
-    background-color: transparent;
-    outline: 2px solid green;
+.registration-page .btn {
+    background-color: hsl(18, 92%, 49%);
 }
 
-.register-page form input::placeholder {
-    color: white;
-}
-
-.register-page .register-button .btn:hover {
+.registration-page .btn:hover {
     text-decoration: underline;
+    background-color: hsl(18, 92%, 45%);
 }
-
 
 /* Media Queries */
 @media (max-width: 767px) {
-    .register-page .registration-container {
-        margin-right: 0;
+    .registration-page .form-container {
+        margin: 0 1rem;
     }
 }
