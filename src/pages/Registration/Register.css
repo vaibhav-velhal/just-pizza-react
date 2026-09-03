@@ -1,6 +1,5 @@
 .registration-page {
-    /* min-height: 100vh; */
-    background-image: url("./../../../public/pizza-auth-image.jpg");
+    background: url("./../../../public/pizza-auth-image.jpg") no-repeat center;
 }
 
 .registration-page .registration-container {
@@ -17,13 +16,23 @@
 }
 
 .registration-page .btn {
-    background-color: hsl(18, 92%, 49%);
+    background-color: #df2620;
 }
 
 .registration-page .btn:hover {
     text-decoration: underline;
-    background-color: hsl(18, 92%, 45%);
+    background-color: #c9221d;
 }
+
+.registration-container .desc a {
+    color: #df2620;
+    text-decoration: none;
+}
+
+.registration-container .desc a:hover {
+    text-decoration: underline;
+}
+
 
 /* Media Queries */
 @media (max-width: 767px) {

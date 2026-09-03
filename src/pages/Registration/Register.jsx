@@ -52,7 +52,7 @@ function Register() {
     return(
         <>
             <div className="row m-0 registration-page">
-                <div className="col-md-7 col-12 py-md-5 py-4 registration-container d-flex flex-column justify-content-center">
+                <div className="col-md-8 col-12 ms-auto py-5 registration-container d-flex flex-column justify-content-center">
                     <section>
                         <h1 className="text-center mb-1 fs-2">
                             <img src="./../../../logo.png" alt="JustPizza-logo" className="mb-2" style={{height: 30, width: 30}}/>
@@ -66,7 +66,7 @@ function Register() {
                         <div className="form-container">
                             <form onSubmit={handleRegistration} method="POST">
                                 <div className="fullName-box d-md-flex gap-md-3">
-                                    <div className="firstName-input-box mb-3">
+                                    <div className="firstName-input-box w-100 mb-3">
                                         <label htmlFor="firstName" className="form-label fw-semibold">First Name</label>
                                         <input
                                             id="firstName"
@@ -84,7 +84,7 @@ function Register() {
                                         />
                                     </div>
 
-                                    <div className="lastName-input-box mb-3">
+                                    <div className="lastName-input-box w-100 mb-3">
                                         <label htmlFor="lastName" className="form-label fw-semibold">Last Name</label>
                                         <input
                                             id="lastName"
@@ -152,10 +152,10 @@ function Register() {
                                     />
                                 </div>
 
-                                <button className="btn text-light mt-2 mb-3 w-100" type="submit">Register</button>
+                                <button className="btn text-light my-3 w-100" type="submit">Register</button>
 
                                 <div className="desc text-center">
-                                    <p className="m-0">Already have an account? <Link to="/login">Login here</Link></p>
+                                    <p className="m-0">Already have an account? <Link to="/login" className="fw-semibold">Login here</Link></p>
                                 </div>
                             </form>
                         </div>

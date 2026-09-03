@@ -40,7 +40,7 @@ function Login() {
     return(
         <>
             <div className="row m-0 login-page">
-                <div className="col-md-7 col-12 login-container d-flex flex-column justify-content-center">
+                <div className="col-md-8 col-12 ms-auto login-container d-flex flex-column justify-content-center">
                     <section>
                         <h1 className="text-center mb-1 fs-2">
                             <img src="./../../../logo.png" alt="JustPizza-logo" className="mb-2" style={{height: 30, width: 30}}/>
@@ -91,13 +91,13 @@ function Login() {
                                     />
                                 </div>
 
-                                <button className="btn text-light mb-3 w-100" type="submit">
+                                <button className="btn text-light my-3 w-100" type="submit">
                                     Login
                                 </button>
 
                                 <div className="desc text-center">                                    
-                                    <p className="text-secondary mb-1">Don't have account? <Link to="/register">Register here</Link></p>                                    
-                                    <Link to="/">Return to Home</Link>
+                                    <p className="text-secondary mb-1">Don't have account? <Link to="/register" className="fw-semibold">Register here</Link></p>                                    
+                                    <Link to="/" className="fw-semibold">Return to Home</Link>
                                 </div>
                             </form>
                         </div>
