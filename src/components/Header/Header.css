@@ -3,7 +3,7 @@
 }
 
 .header-container {
-    height: 70vh;
+    min-height: clamp(450px, 40vw, 550px);
     background-image: url("./../../../public/pizza-header-image.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -12,12 +12,29 @@
     align-items: center;
 }
 
-/* .header-container .header-text {
-    margin-left: 3rem;
-} */
+.header-container .header-text {
+    margin-left: 5rem;
+}
 
 .header-container .header-text .header-small-text {
     color: #df2620;
+}
+
+.header-container .header-text h1 {
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+}
+
+.header-container .header-text p {
+    max-width: 31vw;
+    font-size: clamp(0.95rem, 1.6vw, 1.5rem);
+}
+
+.header-btn-section .order-btn {
+    background-color: #df2620;
+}
+
+.header-btn-section .order-btn:hover {
+    background-color: #c9221d;
 }
 
 .welcome-text {
@@ -34,8 +51,12 @@
 }
 
 
-@media (max-width: 768px) {
-    .header-container {
-        height: 45vh;
+/* Media Queries */
+@media (max-width: 767px) {
+    .header-container .header-text {
+        margin-left: 0;
+    }
+    .header-container .header-text p {
+        max-width: 70vw;
     }
 }

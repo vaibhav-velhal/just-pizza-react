@@ -36,7 +36,7 @@ function Navbar() {
                                 );
 
     return (
-        <nav className="navbar navbar-expand-lg my-2">
+        <nav className="navbar navbar-expand-lg">
             <div className="container-fluid px-md-5">
                 <div className="navbar-items d-flex flex-row-reverse flex-lg-row">
                     <a href="/" className="navbar-brand me-0 fs-4 fw-semibold">
