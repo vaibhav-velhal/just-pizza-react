@@ -4,15 +4,23 @@
 
 .header-container {
     height: 70vh;
-    background: url("./../../../public/pizza-header-image.jpg") no-repeat center center;
+    background-image: url("./../../../public/pizza-header-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
 }
 
+/* .header-container .header-text {
+    margin-left: 3rem;
+} */
+
+.header-container .header-text .header-small-text {
+    color: #df2620;
+}
+
 .welcome-text {
-    margin-left: clamp(0.9rem, 8vw, 7.5rem);
-    line-height: 1;    
     animation: fadeIn 2s;
 }
 
@@ -23,16 +31,6 @@
   100%{
     opacity: 1;
   }
-}
-
-.header-container h1 {
-    color: hsl(18, 92%, 45%);
-    font-size: clamp(1.8rem, 5vw, 3.7rem);
-}
-
-.header-container p {
-    color: hsl(0, 0%, 25%);
-    font-size: clamp(1.2rem, 3vw, 1.9rem);
 }
 
 
