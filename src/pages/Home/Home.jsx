@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { qualitiesSection } from "../../data/qualitiesSection";
+import { menuList } from "./../../data/menuList"
 import "./Home.css";
 
 function Home() {
@@ -38,6 +39,34 @@ function Home() {
                                             </div>
                                             <h2 className="fw-semibold fs-6 mb-1">{item.name}</h2>
                                             <p className="text-secondary">{item.subText}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container-fluid px-md-5 popular-pizzas-section my-5">
+                        <h2 className="border-start border-danger border-4 fs-4 ps-2 mb-4">Popular Pizzas</h2>
+                        
+                        <div className="row row-cols-2">
+                            {
+                                menuList.slice(0, 6).map((item, index) => {
+                                    return(
+                                        <div className="col-6 col-lg-2 mb-3 mb-md-0" key={index}>
+                                            <div className="card shadow-sm border border-opacity-10 rounded-3">
+                                                <div className="card-body p-0">
+                                                    <div className="image-container rounded-top-3">
+                                                        <img src={item.image} alt={item.name} />
+                                                    </div>
+                                                    <div className="pizza-desc p-3">
+                                                        <p className="fw-semibold mb-1">{item.name}</p>
+                                                        <p className="fw-semibold m-0">{"\u20B9"} {item.price}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     )
                                 })
