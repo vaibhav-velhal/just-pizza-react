@@ -1,7 +1,12 @@
-.header {
-    margin-bottom: 4rem;
+.order-btn {
+    background-color: #df2620 !important;
 }
 
+.order-btn:hover {
+    background-color: #c9221d !important;
+}
+
+/* header-section */
 .header-container {
     min-height: clamp(450px, 40vw, 550px);
     background-image: url("./../../../public/pizza-header-image.jpg");
@@ -29,13 +34,6 @@
     font-size: clamp(0.95rem, 1.6vw, 1.5rem);
 }
 
-.header-btn-section .order-btn {
-    background-color: #df2620;
-}
-
-.header-btn-section .order-btn:hover {
-    background-color: #c9221d;
-}
 
 .welcome-text {
     animation: fadeIn 2s;
@@ -51,12 +49,24 @@
 }
 
 
+/* qaulities-section */
+.qualities-section .row .img-container img {
+    width: 70px;
+    overflow: hidden;
+}
+
 /* Media Queries */
 @media (max-width: 767px) {
+    /* header-section */
     .header-container .hero-content {
         margin-left: 0;
     }
     .header-container .hero-content p {
         max-width: 70vw;
+    }
+
+    /* qualities-section */
+    .ad-section .row .img-container img {
+        width: 50px;
     }
 }

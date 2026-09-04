@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { MenuList } from "../../data/menuList";
+// import { menuList } from "../../data/menuList";
 import { MdRestaurantMenu } from "react-icons/md";
 import "./Menu.css";
 
@@ -7,7 +7,7 @@ function Menu() {
 
   const [sortType, setSortType] = useState("default");
 
-  const sortedMenu = [...MenuList].sort((a, b) => {
+  const sortedMenu = [...menuList].sort((a, b) => {
     if(sortType === "low") {
       return a.price - b.price;
     }
