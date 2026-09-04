@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-// import { menuList } from "../../data/menuList";
-import { MdRestaurantMenu } from "react-icons/md";
+import { menuList } from "../../data/menuList";
+import { PiChefHatThin } from "react-icons/pi";
 import "./Menu.css";
 
 function Menu() {
@@ -18,40 +18,74 @@ function Menu() {
   });
 
   return (
-    <div id="menu" className="menu container">
 
-      <h1 className="text-center mb-3">
-        <MdRestaurantMenu className="mb-2 me-1" />
-        Explore our menu
-      </h1>
+    <section>
+      <header>
+        <div className="container text-center mt-5">
+          <PiChefHatThin size={40} style={{color: "#df2620"}} />
+          <h1 className="fw-semibold">Our Menu</h1>
+          <h2 className="fs-5 text-secondary">Choose from a wide range of delicious pizzas.</h2>
+        </div>
+      </header>
 
-      <div className="sort-box mb-3" style={{width: 180}}>
-        <select onChange={(e) => setSortType(e.target.value)} className="form-select">
-          <option value="default">Sort By</option>
-          <option value="low">Price: Low to High</option>
-          <option value="high">Price: High to Low</option>
-        </select>
-      </div>
-
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5">
-        {sortedMenu.map((item, index) => (
-          <div className="col d-flex justify-content-center" key={index}>
-            <div className="card rounded-4">
-
-              <div className="image-container rounded-top-4">
-                <img src={item.image} alt={item.name} className="card-img-top" loading="lazy" />
-              </div>
-
-              <div className="card-body mx-3 my-2">
-                <h5 className="card-title mb-2">{item.name}</h5>
-                <p className="card-text">{"\u20B9"} {item.price}</p>
+      <section>
+        <div className="container-fluid px-lg-5 mt-4 mt-md-5 mb-5">
+          <div className="row">
+            <div className="col-12 col-md-3 mb-4 mb-lg-0">
+              <div className="card py-md-4 px-md-2 shadow-sm border border-opacity-10 rounded-4">
+                <div className="card-body">
+                  <div className="sort-box">
+                    <select onChange={(e) => setSortType(e.target.value)} className="form-select">
+                      <option value="default">Sort By</option>
+                      <option value="low">Price: Low to High</option>
+                      <option value="high">Price: High to Low</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
 
-    </div >
+            <div className="col-12 col-md-9">
+              <div className="container menu-section">
+                <div className="row">
+                  {
+                    sortedMenu.map((item, index) => {
+                      return(
+                        <div className="col-6 col-md-3 mb-4" key={index}>
+                          <div className="card shadow-sm border border-opacity-10 rounded-3">
+                            <div className="card-body p-0">
+                              <div className="image-container rounded-top-3">
+                                <img src={item.image} alt={item.name} />
+                              </div>
+                              <div className="pizza-desc p-3">
+                                <p className="fw-semibold mb-1">{item.name}</p>
+                                <p className="fw-semibold m-0" style={{color: "#df2620"}}>{"\u20B9"} {item.price}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+
+
+    // <div id="menu" className="menu-page container">
+
+    //   
+
+    //   
+
+    // </div >
   );
 }
 
