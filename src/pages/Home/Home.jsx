@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { qualitiesSection } from "../../data/qualitiesSection";
 import { menuList } from "./../../data/menuList"
 import { customersReview } from "../../data/customersReview";
+import { instagramSection } from "../../data/instagramSection";
 import { FaStar } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
 import "./Home.css";
 
 function Home() {
@@ -112,6 +114,32 @@ function Home() {
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container-fluid px-md-5 instagram-images-section my-5">
+                        <h2 className="border-start border-danger border-4 fs-4 ps-2 mb-4">Follows Us On Instagram</h2>
+                        
+                        <div className="row posts">
+                            {
+                                instagramSection.map((item, index) => {
+                                    return(
+                                        <div className="post col-6 col-md-3 mb-3 mb-md-0" key={index}>
+                                            <a href="https://www.instagram.com/" target="_blank">
+                                                <div className="image-container rounded-3">
+                                                    <img src={item.image} alt={item.name} />
+                                                </div>
+                                                <div className="caption rounded-3">
+                                                    <div className="instagram-icon"><IoLogoInstagram size={45} /></div>
+                                                    <p className="pizza-name fs-5 m-0">{item.name}</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     )
                                 })
