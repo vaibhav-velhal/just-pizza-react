@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { qualitiesSection } from "../../data/qualitiesSection";
 import { menuList } from "./../../data/menuList"
+import { customersReview } from "../../data/customersReview";
+import { FaStar } from "react-icons/fa";
 import "./Home.css";
 
 function Home() {
@@ -84,6 +86,36 @@ function Home() {
                             </h2>
                             <p>Use Code <span className="fw-semibold" style={{color: "#c9221d"}}> JUSTPIZZA20</span></p>
                             <Link className="order-btn btn text-light fw-semibold" to="/menu">Order Now</Link>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="container-fluid px-md-5 customer-review-section my-5">
+                        <h2 className="border-start border-danger border-4 fs-4 ps-2 mb-4">What Our Customers Says</h2>
+                        
+                        <div className="row">
+                            {
+                                customersReview.map((item, index) => {
+                                    return(
+                                        <div className="col-12 col-md-4 mb-3 mb-md-0" key={index}>
+                                            <div className="card border-0 bg-secondary bg-opacity-10 shadow-sm rounded-4">
+                                                <div className="card-body p-4">
+                                                    <p className="w-75">{item.review}</p>
+                                                    <h4 className="fs-6 fw-semibold mb-3">{item.name}</h4>
+                                                    <div style={{color: "#f6ac25"}}>
+                                                        {
+                                                            [...Array(5)].map((_, index) => (
+                                                                <FaStar key={index} />
+                                                            ))
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </section>
