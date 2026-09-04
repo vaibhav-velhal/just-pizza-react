@@ -75,6 +75,19 @@ function Home() {
                     </div>
                 </section>
 
+                <section>
+                    <div className="container-lg-fluid my-5">
+                        <div className="offer-section text-light p-4 p-md-5 mx-3 rounded-3">
+                            <h2>
+                                Get 20% OFF <br />
+                                On Your First Order!
+                            </h2>
+                            <p>Use Code <span className="fw-semibold" style={{color: "#c9221d"}}> JUSTPIZZA20</span></p>
+                            <Link className="order-btn btn text-light fw-semibold" to="/menu">Order Now</Link>
+                        </div>
+                    </div>
+                </section>
+
             </section>
         </>
     )
