@@ -4,6 +4,7 @@ import { GoGoal } from "react-icons/go";
 import { TbDeviceVisionPro } from "react-icons/tb";
 import quality from "./../../assets/about-page-images/quality.png"
 import { FaRegHeart } from "react-icons/fa6";
+import { aboutContentOne } from "../../data/aboutContentOne";
 import "./About.css";
 
 function About() {
@@ -106,6 +107,31 @@ function About() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container-fluid px-md-3 my-5">
+          <div className="why-choose-us-section px-2 py-4 p-md-5 text-light rounded-4">
+            <h4 className="text-center mb-4">Why Choose Us?</h4>
+            
+            <div className="container about-qualities-content-one text-center">
+              <div className="row">
+                {
+                  aboutContentOne.map((item, index) => {
+                    return(
+                      <div className="col-3 text-center" key={index}>
+                        <div className="image-container mb-2">
+                          <img src={item.img} alt={item.name} style={{width: 70}} />
+                        </div>
+                        <p className="fw-semibold m-0">{item.name}</p>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </div>
           </div>
         </div>
       </section>

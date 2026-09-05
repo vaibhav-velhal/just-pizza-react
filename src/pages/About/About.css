@@ -21,6 +21,10 @@
     width: 50%;
 }
 
+/* why-choose-use-section */
+.why-choose-us-section{
+    background-color: #191919;
+}
 
 
 @media (max-width: 767px) {
