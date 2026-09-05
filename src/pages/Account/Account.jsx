@@ -1,3 +1,5 @@
+import { userDetails } from '../../services/user/user.api';
+import { useEffect, useState } from 'react';
 import { useNavigate, Link, useParams } from 'react-router-dom';
 import { PiChefHatThin } from "react-icons/pi";
 import { IoPerson } from 'react-icons/io5';
@@ -11,6 +13,27 @@ function Account() {
     const userId = params.userId;
 
     const navigate = useNavigate();
+
+    const [userData, setUserData] = useState({});
+
+
+
+
+
+
+    useEffect(function(){
+        try{
+            const getUser = async () => {
+                const res = await userDetails(token, userId);
+                
+                setUserData(res);
+            };
+    
+            getUser();
+        } catch(error) {
+            console.error(error);
+        }
+    }, []);
 
     // Logout button
     const handleLogout = () => {
@@ -78,6 +101,42 @@ function Account() {
                                         )
                                     }
                                 </div>
+                            </div>
+                        </div>
+
+                        <div className="col-12 col-md-8 mt-4 mt-lg-0">
+                            <div className="container">
+                                <section>
+                                    <div className="profile-section mb-4">
+                                        <div className="card shadow-sm p-3 p-md-4 px-md-5 rounded-4">
+                                            <div className="card-header-content mb-3 d-flex justify-content-between align-items-center">
+                                                <h2 className="fs-4">Profile Information</h2>
+                                                <button className="btn btn-outline-danger px-3 py-1">Edit</button>
+                                            </div>
+                                            <div className="card-body p-0">
+                                                <div className="profile-info d-flex align-items-center">
+                                                    <div className="image-container">
+                                                        <div className="border border-3 border-secondary border-opacity-75 rounded-circle mb-1 p-2">
+                                                            <IoPerson className="text-secondary mb-1" size={65} />
+                                                        </div>
+                                                    </div>
+                                                    <div className="personal-info ms-4">
+                                                        <h3 className="full-name fs-5 mb-1 fw-semibold">
+                                                            { userData.firstName && userData.lastName ? (<span>{userData.firstName} {userData.lastName}</span>) : (<span>Guest</span>)}
+                                                        </h3>
+                                                        <p className="email text-secondary mb-1">
+                                                            { userData.email ? (<span>{userData.email}</span>) : (<span>abc@gmail.com</span>)}
+                                                        </p>
+                                                        <p className="phone text-secondary m-0">
+                                                            { userData.phone ? (<span>{userData.phone}</span>) : (<span>123456789</span>)}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
                             </div>
                         </div>
                     </div>
