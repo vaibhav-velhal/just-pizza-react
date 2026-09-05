@@ -5,6 +5,7 @@ import { PiChefHatThin } from "react-icons/pi";
 import { IoPerson } from 'react-icons/io5';
 import { BiFoodMenu } from "react-icons/bi";
 import { RiLogoutCircleRLine, RiLoginCircleLine } from "react-icons/ri";
+import { FaArrowRight } from "react-icons/fa6";
 
 function Account() {
 
@@ -14,6 +15,7 @@ function Account() {
 
     const navigate = useNavigate();
 
+    const orders = false;
     const [userData, setUserData] = useState({});
 
 
@@ -132,6 +134,43 @@ function Account() {
                                                         </p>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div className="recent-orders-section mb-3 mb-lg-0">
+                                        <div className="card recent-orders-container shadow-sm rounded-4">
+                                            <div className="card-body p-4">
+                                                <header>
+                                                    <div className="header-content mb-3 d-flex justify-content-between align-items-center">
+                                                        <h2 className="fs-5">Recent Orders</h2>
+                                                        <button className="btn text-danger fw-semibold">View All<FaArrowRight className="mb-1 ms-2 fw-semibold" /></button>
+                                                    </div>
+                                                </header>
+                                                {
+                                                    [...Array(3)].map((_, index) => (
+                                                        <div className="card mb-3 rounded-3" key={index}>
+                                                            <div className="card-body d-flex justify-content-between">
+                                                                <div className="order-no">
+                                                                    <div className="bg-secondary bg-opacity-10 rounded mb-2" style={{width: 90, height: 20}}></div>
+                                                                    <div className="bg-secondary bg-opacity-10 rounded" style={{width: 47, height: 18}}></div>
+                                                                </div>
+                                                                <div className="order-total d-flex flex-column align-items-center">
+                                                                    <div className="bg-secondary bg-opacity-10 rounded" style={{width: 45, height: 20}}></div>
+                                                                    {
+                                                                        orders ? ("") : (<p className="text-secondary m-0">No order yet...</p>)
+                                                                    }                                                                    
+                                                                </div>
+                                                                <div className="order-status d-flex flex-column align-items-center">
+                                                                    <div className="bg-success bg-opacity-25 text-success px-2 py-1 mb-2 rounded-2" style={{width: 85, height: 32}}></div>
+                                                                    <div className="bg-secondary bg-opacity-10 rounded" style={{width: 78, height: 18}}></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                    ))
+                                                }
                                             </div>
                                         </div>
                                     </div>
