@@ -5,6 +5,7 @@ import { TbDeviceVisionPro } from "react-icons/tb";
 import quality from "./../../assets/about-page-images/quality.png"
 import { FaRegHeart } from "react-icons/fa6";
 import { aboutContentOne } from "../../data/aboutContentOne";
+import { aboutContentTwo } from "../../data/aboutContentTwo";
 import "./About.css";
 
 function About() {
@@ -131,6 +132,28 @@ function About() {
                   })
                 }
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container-fluid px-md-3 my-5">            
+          <div className="container about-qualities-content-two text-center">
+            <div className="row">
+              {
+                aboutContentTwo.map((item, index) => {
+                  return(
+                    <div className="col-6 col-md-3 text-center mb-5 mb-lg-0" key={index}>
+                      <div className="image-container mb-2">
+                        <img src={item.img} alt={item.title} style={{width: 70}} />
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p className="fw-semibold m-0">{item.desc}</p>
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
         </div>
