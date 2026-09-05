@@ -69,7 +69,7 @@ function Navbar() {
                     </ul>
                     <ul className="navbar-nav align-items-lg-center my-2 my-lg-0 gap-1 gap-md-4">
                         <li className="nav-item fw-semibold">
-                            <NavLink to={`/account/${userId}`} className="btn account-btn text-light fw-semibold">Account</NavLink>
+                            <NavLink to={`/account/${userId}`} className="account-btn px-3 py-2 text-light fw-semibold rounded-2">Account</NavLink>
                         </li>
                         <li className="nav-item">
                             <div className="auth-btn d-none d-lg-block">

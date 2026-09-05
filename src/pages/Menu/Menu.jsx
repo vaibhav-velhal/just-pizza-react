@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import { useState } from "react";
 import { menuList } from "../../data/menuList";
 import { PiChefHatThin } from "react-icons/pi";
 import "./Menu.css";
@@ -77,15 +77,6 @@ function Menu() {
       </section>
 
     </section>
-
-
-    // <div id="menu" className="menu-page container">
-
-    //   
-
-    //   
-
-    // </div >
   );
 }
 
