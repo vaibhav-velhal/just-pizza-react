@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import { PiChefHatThin } from "react-icons/pi";
 
 function Account() {
 
+    const token = JSON.parse(localStorage.getItem("token"));
     
     return(
 
@@ -13,6 +15,20 @@ function Account() {
                     <h2 className="fs-5 text-secondary">Manage your profile, orders and more.</h2>
                 </div>
             </header>
+
+            {
+                token ? 
+                    ("") : 
+                    (
+                        <section>
+                            <div className="text-center mt-4">
+                                <p className="m-0">Please login to see details...</p>
+                                <Link to="/login">Login here...</Link>
+                            </div>
+                        </section>
+                    )
+            }
+
         </section>
     )
 }

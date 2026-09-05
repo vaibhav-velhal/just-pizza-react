@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { menuList } from "../../data/menuList";
 import { PiChefHatThin } from "react-icons/pi";
-import "./Menu.css";
 
 function Menu() {
 
