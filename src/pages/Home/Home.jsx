@@ -55,11 +55,11 @@ function Home() {
                     <div className="container-fluid px-md-5 popular-pizzas-section my-5">
                         <h2 className="border-start border-danger border-4 fs-4 ps-2 mb-4">Popular Pizzas</h2>
                         
-                        <div className="row row-cols-2">
+                        <div className="row row-cols-2 px-2 px-lg-0">
                             {
                                 menuList.slice(0, 6).map((item, index) => {
                                     return(
-                                        <div className="col-6 col-lg-2 mb-3 mb-md-0" key={index}>
+                                        <div className="col-6 col-lg-2 mb-4 mb-md-0" key={index}>
                                             <div className="card shadow-sm border border-opacity-10 rounded-3">
                                                 <div className="card-body p-0">
                                                     <div className="image-container rounded-top-3">
