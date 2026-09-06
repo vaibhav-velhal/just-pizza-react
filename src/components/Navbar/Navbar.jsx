@@ -38,22 +38,21 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid px-md-5">
-                <div className="navbar-items d-flex flex-row-reverse flex-lg-row">
-                    <a href="/" className="navbar-brand me-0 fs-4 fw-semibold">
-                        <img src="./../../../logo.png" alt="JustPizza-logo" className="mb-1" style={{height: 30, width: 30}}/>JustPizza
-                    </a>
-                    <button 
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="/" className="navbar-brand mx-auto mx-lg-0 fs-4 fw-semibold">
+                    <img src="./../../../logo.png" alt="JustPizza-logo" className="mb-1" style={{height: 30, width: 30}}/>JustPizza
+                </a>
 
                 <div className="collapse navbar-collapse justify-content-between ms-2 ms-lg-0" id="navbarNav">
                     <ul className="navbar-nav mx-auto gap-1 gap-md-4">
