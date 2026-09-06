@@ -146,26 +146,42 @@ function Account() {
                                                 <header>
                                                     <div className="header-content mb-3 d-flex justify-content-between align-items-center">
                                                         <h2 className="fs-5">Recent Orders</h2>
-                                                        <button className="btn text-danger fw-semibold">View All<FaArrowRight className="mb-1 ms-2 fw-semibold" /></button>
+                                                        <button className="btn border-0 text-danger fw-semibold" disabled>View All<FaArrowRight className="mb-1 ms-2 fw-semibold" /></button>
                                                     </div>
                                                 </header>
                                                 {
                                                     [...Array(3)].map((_, index) => (
                                                         <div className="card mb-3 rounded-3" key={index}>
                                                             <div className="card-body d-flex justify-content-between">
-                                                                <div className="order-no">
-                                                                    <div className="bg-secondary bg-opacity-10 rounded mb-2" style={{width: 90, height: 20}}></div>
-                                                                    <div className="bg-secondary bg-opacity-10 rounded" style={{width: 47, height: 18}}></div>
+                                                                <div className="order-no col-3">
+                                                                    <h5 className="placeholder-glow">
+                                                                        <span className="placeholder bg-secondary bg-opacity-25 col-12 col-lg-6 rounded"></span>
+                                                                    </h5>
+                                                                    <p className="placeholder-glow">
+                                                                        <span className="placeholder bg-secondary bg-opacity-25 placeholder-sm col-6 col-lg-4 rounded"></span>
+                                                                    </p>
                                                                 </div>
-                                                                <div className="order-total d-flex flex-column align-items-center">
-                                                                    <div className="bg-secondary bg-opacity-10 rounded" style={{width: 45, height: 20}}></div>
+                                                                <div className="order-total col-5 col-lg-3 text-center">
+                                                                    <h5 className="placeholder-glow text-center">
+                                                                        <span className="placeholder placeholder-sm bg-secondary bg-opacity-25 col-6 rounded"></span>
+                                                                    </h5>
                                                                     {
-                                                                        orders ? ("") : (<p className="text-secondary m-0">No order yet...</p>)
-                                                                    }                                                                    
+                                                                        !orders ?
+                                                                        (
+                                                                            <div className="no-order-status">
+                                                                                <p className="text-secondary m-0">No order yet...</p>
+                                                                            </div>
+                                                                        ) :
+                                                                        (null)
+                                                                    }
                                                                 </div>
-                                                                <div className="order-status d-flex flex-column align-items-center">
-                                                                    <div className="bg-success bg-opacity-25 text-success px-2 py-1 mb-2 rounded-2" style={{width: 85, height: 32}}></div>
-                                                                    <div className="bg-secondary bg-opacity-10 rounded" style={{width: 78, height: 18}}></div>
+                                                                <div className="order-status col-3">
+                                                                    <h5 className="placeholder-glow text-end">
+                                                                        <span className="placeholder col-12 col-lg-6 rounded" style={{backgroundColor: "hsl(120deg 75% 80%)"}}></span>
+                                                                    </h5>
+                                                                    <p className="placeholder-glow text-end">
+                                                                        <span className="placeholder bg-secondary bg-opacity-25 placeholder-sm col-6 col-lg-4 rounded"></span>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>                                                        
