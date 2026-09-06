@@ -28,19 +28,3 @@
     box-shadow: none;
     border: none;
 }
-
-
-/* Media Queries */
-@media (max-width: 991px) {
-    /* .navbar .container-fluid {
-        justify-content: center !important;
-    } */
-
-    /* .navbar .navbar-toggler, .navbar .navbar-brand {
-        margin-right: auto;
-    } */
-    /* .navbar .navbar-brand {
-        display: flex;
-        justify-self: center !important;
-    } */
-}

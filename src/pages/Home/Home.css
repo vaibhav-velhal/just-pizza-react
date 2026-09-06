@@ -75,7 +75,6 @@
 }
 
 .instagram-images-section .post .caption {
-    margin: 0 12px;
     position: absolute;
     top: 0;
     left: 0;
@@ -116,6 +115,6 @@
     
     /* instagram-images-section */
     .instagram-images-section .posts .post .image-container {
-        height: 10rem !important;
+        height: 15rem !important;
     }
 }

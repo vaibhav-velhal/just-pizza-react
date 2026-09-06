@@ -126,16 +126,16 @@ function Home() {
                     <div className="container-fluid px-md-5 instagram-images-section my-5">
                         <h2 className="border-start border-danger border-4 fs-4 ps-2 mb-4">Follows Us On Instagram</h2>
                         
-                        <div className="row posts">
+                        <div className="row posts px-1 px-lg-2">
                             {
                                 instagramSection.map((item, index) => {
                                     return(
-                                        <div className="post col-6 col-md-3 mb-3 mb-md-0" key={index}>
+                                        <div className="post col-6 col-md-3 px-1 mb-2 mb-md-0" key={index}>
                                             <a href="https://www.instagram.com/" target="_blank">
-                                                <div className="image-container rounded-3">
-                                                    <img src={item.image} alt={item.name} />
+                                                <div className="image-container">
+                                                    <img src={item.image} alt={item.name} className="rounded-3" />
                                                 </div>
-                                                <div className="caption rounded-3">
+                                                <div className="caption mx-1 rounded-3">
                                                     <div className="instagram-icon"><IoLogoInstagram size={45} /></div>
                                                     <p className="pizza-name fs-5 m-0">{item.name}</p>
                                                 </div>
