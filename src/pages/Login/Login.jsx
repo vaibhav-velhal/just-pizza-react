@@ -88,7 +88,7 @@ function Login() {
                                     <div className="input-group">
                                         <input
                                             id="password"
-                                            type="password"
+                                            type={showPassword ? "text" : "password"}
                                             name="password"
                                             className="form-control"
                                             placeholder="Enter your password"
