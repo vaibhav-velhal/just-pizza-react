@@ -39,7 +39,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid px-md-5">
                 <button
-                    className="navbar-toggler"
+                    className="navbar-toggler border-0 p-0 shadow-none"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
