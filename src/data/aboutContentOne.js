@@ -1,7 +1,7 @@
 import leaf from "./../assets/about-page-images/leaf.png"
 import foodHandling from "./../assets/about-page-images/food-handling.png"
 import fastDelivery from "./../assets/about-page-images/fast-delivery.png"
-import cityscape from "./../assets/about-page-images/cityscape.png"
+import cityscape from "./../assets/about-page-images/city.png"
 
 
 export const aboutContentOne = [

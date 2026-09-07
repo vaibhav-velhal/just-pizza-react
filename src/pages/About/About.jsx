@@ -42,14 +42,13 @@ function About() {
               <div className="card bg-light bg-opacity-50 shadow-sm rounded-4">
                 <div className="card-body d-flex align-items-center justify-content-between p-4 p-md-5">
                   <div className="content">
-                    <div className="card-logo"></div>
                     <div className="card-title">
                       <h3 className="fw-semibold fs-4">Our Mission</h3>
                     </div>
                     <p className="text-secondary m-0 w-75">To deliver delicious, high-qulity pizza and excelient service.</p>
                   </div>
-                  <div className="logo">
-                    <GoGoal size={45} />
+                  <div className="icon-container">
+                    <GoGoal className="icon" size={45} />
                   </div>
                 </div>
               </div>
@@ -59,14 +58,13 @@ function About() {
               <div className="card bg-light bg-opacity-50 shadow-sm rounded-4">
                 <div className="card-body d-flex align-items-center justify-content-between p-4 p-md-5">
                   <div className="content">
-                    <div className="card-logo"></div>
                     <div className="card-title">
                       <h3 className="fw-semibold fs-4">Our Vision</h3>
                     </div>
                     <p className="text-secondary m-0 w-75">To be the most loved pizza brand in the world.</p>
                   </div>
-                  <div className="logo">
-                    <TbDeviceVisionPro size={45} />
+                  <div className="icon-container">
+                    <TbDeviceVisionPro className="icon" size={45} />
                   </div>
                 </div>
               </div>
@@ -76,15 +74,14 @@ function About() {
               <div className="card bg-light bg-opacity-50 shadow-sm rounded-4">
                 <div className="card-body d-flex align-items-center justify-content-between p-4 p-md-5">
                   <div className="content">
-                    <div className="card-logo"></div>
                     <div className="card-title">
                       <h3 className="fw-semibold fs-4">Quality Ingredients</h3>
                     </div>
                     <p className="text-secondary m-0 w-75">We use 100% fresh and premimum ingredients.</p>
                   </div>
-                  <div className="logo">
+                  <div className="icon-container">
                     <div className="image-container">
-                      <img src={quality} alt="Quality Image" style={{width: 45}} />
+                      <img src={quality} alt="Quality Image" className="quality-image" />
                     </div>
                   </div>
                 </div>
@@ -95,14 +92,13 @@ function About() {
               <div className="card bg-light bg-opacity-50 shadow-sm rounded-4">
                 <div className="card-body d-flex align-items-center justify-content-between p-4 p-md-5">
                   <div className="content">
-                    <div className="card-logo"></div>
                     <div className="card-title">
                       <h3 className="fw-semibold fs-4">Made With Love</h3>
                     </div>
                     <p className="text-secondary m-0 w-75">Easy pizza is crafted with passion and care.</p>
                   </div>
-                  <div className="logo">
-                    <FaRegHeart size={45} />
+                  <div className="icon-container">
+                    <FaRegHeart className="icon" size={45} />
                   </div>
                 </div>
               </div>
@@ -124,7 +120,7 @@ function About() {
                     return(
                       <div className="col-3 text-center" key={index}>
                         <div className="image-container mb-2">
-                          <img src={item.img} alt={item.name} style={{width: 70}} />
+                          <img src={item.img} alt={item.name} className="icon" style={{width: 70}} />
                         </div>
                         <p className="fw-semibold m-0">{item.name}</p>
                       </div>
@@ -144,7 +140,7 @@ function About() {
               {
                 aboutContentTwo.map((item, index) => {
                   return(
-                    <div className="col-6 col-md-3 text-center mb-5 mb-lg-0" key={index}>
+                    <div className="col-6 col-md-3 mb-5 mb-lg-0" key={index}>
                       <div className="image-container mb-2">
                         <img src={item.img} alt={item.title} style={{width: 70}} />
                       </div>

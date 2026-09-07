@@ -3,6 +3,7 @@ import fifty from "./../assets/about-page-images/fifty.png";
 import store from "./../assets/about-page-images/store.png";
 import rate from "./../assets/about-page-images/rate.png";
 
+const starEmoji = "\u{2B50}";
 
 export const aboutContentTwo = [
     {
@@ -22,7 +23,7 @@ export const aboutContentTwo = [
     },
     {
         img: rate,
-        title: "4.8+",
+        title: "4.8+" + starEmoji,
         desc: "Customer Rating"
     },
 ]
