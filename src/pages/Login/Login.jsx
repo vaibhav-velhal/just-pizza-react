@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../../services/auth/auth.api.js";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import './Login.css';
 
 function Login() {
@@ -8,6 +9,8 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
+    const [showPassword, setShowPassword] = useState(false);
 
     // Handle login
     const handleLogin = async (event) => {
@@ -22,6 +25,8 @@ function Login() {
             if(res.token){
                 setEmail("");
                 setPassword("");
+                setShowPassword(false);
+
                 alert("Login successful");
                 navigate("/");
             }else{
@@ -35,6 +40,10 @@ function Login() {
                 console.error("Login failed:", error);
             }
         }
+    }
+
+    function togglePasswordVisibility() {
+        setShowPassword(!showPassword);
     }
 
     return(
@@ -76,19 +85,26 @@ function Login() {
                                     <label htmlFor="password" className="form-label fw-semibold">
                                         Password
                                     </label>
-                                    <input
-                                        id="password"
-                                        type="password"
-                                        name="password"
-                                        className="form-control"
-                                        placeholder="Enter your password"
-                                        title="Password must be 8-20 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
-                                        minLength={8} maxLength={12}
-                                        // pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
-                                        required
-                                    />
+                                    <div className="input-group">
+                                        <input
+                                            id="password"
+                                            type="password"
+                                            name="password"
+                                            className="form-control"
+                                            placeholder="Enter your password"
+                                            title="Password must be 8-20 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
+                                            minLength={8} maxLength={12}
+                                            // pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                            required
+                                        />
+                                        <button className="input-group-text" type="button" onClick={togglePasswordVisibility}>
+                                            {
+                                                showPassword ? <FaRegEye /> : <FaRegEyeSlash />
+                                            }
+                                        </button>
+                                    </div>
                                 </div>
 
                                 <button className="btn text-light my-3 w-100" type="submit">
