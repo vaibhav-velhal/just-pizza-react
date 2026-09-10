@@ -4,38 +4,38 @@ import { useNavigate, Link, useParams } from 'react-router-dom';
 import { PiChefHatThin } from "react-icons/pi";
 import { IoPerson } from 'react-icons/io5';
 import { BiFoodMenu } from "react-icons/bi";
+import { FiEdit } from "react-icons/fi";
 import { RiLogoutCircleRLine, RiLoginCircleLine } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa6";
 
 function Account() {
 
     const token = JSON.parse(localStorage.getItem("token"));
-    const params = useParams();
-    const userId = params.userId;
+    const userId = localStorage.getItem("userId");
 
     const navigate = useNavigate();
 
     const orders = false;
     const [userData, setUserData] = useState({});
 
-
-
-
-
-
-    useEffect(function(){
-        try{
-            const getUser = async () => {
+    useEffect(() => {
+        const getUser = async () => {
+            try {
                 const res = await userDetails(token, userId);
                 
                 setUserData(res);
-            };
-    
-            getUser();
-        } catch(error) {
-            console.error(error);
-        }
-    }, []);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        getUser();
+    }, [token, userId]);
+
+    // HAndle Edit Button
+    function handleEditBtn() {
+        navigate(`/edit/${userId}`)
+    }
 
     // Logout button
     const handleLogout = () => {
@@ -61,7 +61,7 @@ function Account() {
 
             {
                 token ? 
-                    ("") : 
+                    (null) : 
                     (
                         <section>
                             <div className="text-center mt-4">
@@ -73,17 +73,22 @@ function Account() {
             }
 
             <section>
-                <div className="container-fluid px-lg-5 mt-4 mt-md-5 mb-5">
-                    <div className="row flex-column-reverse flex-lg-row justify-content-center gap-3">
-                        <div className="col-12 col-md-2 mb-4 mb-lg-0">
+                <div className="container-fluid px-lg-3 mt-4 mt-md-5 mb-5">
+                    <div className="row flex-column-reverse flex-lg-row justify-content-center">
+                        <div className="col-12 col-md-3 mb-4 mb-lg-0">
                             <div className="card shadow-sm border border-opacity-10 rounded-4">
                                 <div className="card-body d-flex flex-column">
                                     <Link className="btn btn-danger profile-btn text-start" to={`/account/${userId}`}>
                                         <IoPerson className="mb-1 me-1" size={20} />Profile
                                     </Link>
                                     <hr className="my-2"/>
-                                    <Link className="btn my-orders-btn text-start"><BiFoodMenu className="mb-1 me-1" size={20} />My Orders</Link>
+                                    <button className="btn border-0 my-orders-btn text-start" type='button' disabled><BiFoodMenu className="mb-1 me-1" size={20} />My Orders</button>
                                     <hr className="my-2"/>
+                                    <button 
+                                        className="btn border-0 edit-profile-btn text-start" type='button' 
+                                        onClick={handleEditBtn} disabled={token ? false : true}
+                                    ><FiEdit className="mb-2 me-1" size={20} />Edit Profile</button>
+                                    <hr className="my-2" />
                                     {
                                         token ? 
                                         (
@@ -113,7 +118,10 @@ function Account() {
                                         <div className="card shadow-sm p-3 p-md-4 px-md-5 rounded-4">
                                             <div className="card-header-content mb-3 d-flex justify-content-between align-items-center">
                                                 <h2 className="fs-4">Profile Information</h2>
-                                                <button className="btn btn-outline-danger px-3 py-1">Edit</button>
+                                                <button 
+                                                    className="btn btn-outline-danger px-3 py-1" type='button' 
+                                                    onClick={handleEditBtn} disabled={token ? false : true}
+                                                >Edit</button>
                                             </div>
                                             <div className="card-body p-0">
                                                 <div className="profile-info d-flex align-items-center">
@@ -142,7 +150,7 @@ function Account() {
                                 <section>
                                     <div className="recent-orders-section mb-3 mb-lg-0">
                                         <div className="card recent-orders-container shadow-sm rounded-4">
-                                            <div className="card-body p-4">
+                                            <div className="card-body p-4 pb-2">
                                                 <header>
                                                     <div className="header-content mb-3 d-flex justify-content-between align-items-center">
                                                         <h2 className="fs-5">Recent Orders</h2>

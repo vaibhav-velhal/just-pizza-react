@@ -2,21 +2,38 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 // User Details
 export const userDetails = async (token, userId) => {
-    try {        
-        const res = await fetch(`${BASE_URL}/api/user/${userId}`,{
-            "method": "GET",
-            "headers": {
-                "authorization": `Bearer ${token}`
-            }
-        });
-        
-        const data = await res.json();
-        if(!res.ok){
-            throw new Error("Failed to fetch data");
+    const res = await fetch(`${BASE_URL}/api/user/${userId}`,{
+        "method": "GET",
+        "headers": {
+            "authorization": `Bearer ${token}`
         }
-        
-        return data;
-    } catch(error) {
-        throw error;
+    });
+    
+    const data = await res.json();
+    
+    if (!res.ok) {
+        throw new Error(data.msg || "Failed to fetch data");
     }
+    
+    return data;
 }
+
+
+// Edit User
+export const editUser = async (token, userId, userData) => {
+    const res = await fetch(`${BASE_URL}/api/user/${userId}`, {
+        method: "PATCH",
+        headers: {
+            "content-type": "application/json",
+            "authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(userData)
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+        throw new Error(data.msg || "Failed to update data");
+    }
+
+    return data;
+};

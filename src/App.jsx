@@ -6,6 +6,7 @@ import Menu from "./pages/Menu/Menu"
 import About from "./pages/About/About";
 import Account from "./pages/Account/Account";
 import DefaultTemplate from "./DefaultTemplate";
+import EditProfile from "./pages/EditProfile/EditProfile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
           <Route path="/account/:userId" element={<Account />} />
+          <Route path="/edit/:userId" element={<EditProfile />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />        
