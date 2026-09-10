@@ -17,6 +17,7 @@ function Register() {
 
     const navigate = useNavigate();
 
+    // Handle Registration
     const handleRegistration = async (event) => {
         event.preventDefault();
 
