@@ -1,12 +1,14 @@
 import { userDetails } from '../../services/user/user.api';
+import { deleteUser } from '../../services/user/user.api';
 import { useEffect, useState } from 'react';
-import { useNavigate, Link, useParams } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { PiChefHatThin } from "react-icons/pi";
 import { IoPerson } from 'react-icons/io5';
 import { BiFoodMenu } from "react-icons/bi";
 import { FiEdit } from "react-icons/fi";
 import { RiLogoutCircleRLine, RiLoginCircleLine } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa6";
+import { MdDeleteOutline } from "react-icons/md";
 
 function Account() {
 
@@ -32,7 +34,7 @@ function Account() {
         getUser();
     }, [token, userId]);
 
-    // HAndle Edit Button
+    // Handle Edit Button
     function handleEditBtn() {
         navigate(`/edit/${userId}`)
     }
@@ -47,6 +49,31 @@ function Account() {
             navigate("/");
         }
     };
+
+    // Handle Delete User
+    const handleDeleteUser = async () => {
+        const confirmDelete = window.confirm("Are you sure you want to delete your account?");
+
+        if(confirmDelete) {
+            try {
+                const res = await deleteUser(token, userId);
+    
+                if(res.msg === "User deleted successfully!") {
+                    alert(res.msg);
+                    localStorage.removeItem("token");
+                    localStorage.removeItem("userId");
+                    navigate("/");
+                }
+            } catch(error) {
+                if (!navigator.onLine) {
+                    alert("Please check your internet connection");
+                } else {
+                    alert(error.message || "Account delete failed");
+                }
+                console.error("Account delete failed:", error);
+            }
+        }
+    }
     
     return(
 
@@ -88,6 +115,11 @@ function Account() {
                                         className="btn border-0 edit-profile-btn text-start" type='button' 
                                         onClick={handleEditBtn} disabled={token ? false : true}
                                     ><FiEdit className="mb-2 me-1" size={20} />Edit Profile</button>
+                                    <hr className="my-2"/>
+                                    <button 
+                                        className="btn border-0 delete-profile-btn text-start" type='button' 
+                                        onClick={handleDeleteUser} disabled={token ? false : true}
+                                    ><MdDeleteOutline className="mb-2 me-1" size={21} />Delete your account</button>
                                     <hr className="my-2" />
                                     {
                                         token ? 
