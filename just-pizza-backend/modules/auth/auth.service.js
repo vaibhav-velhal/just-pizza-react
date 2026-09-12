@@ -29,7 +29,11 @@ authService.loginUser = function(req, res, next){
 
         authDb.login(db, value)
             .then(function(userData){
-                var token = jwt.sign({ userId: userData._id.toString()}, jwtSecret);
+                var token = jwt.sign({ 
+                    userId: userData._id.toString()}, 
+                    jwtSecret,
+                    { expiresIn: "1d" }
+                );
                 res.status(200).json({
                     token,
                     firstName: userData.firstName,
