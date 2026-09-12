@@ -84,7 +84,7 @@ function Register() {
                                             name="firstName"
                                             className="form-control"
                                             placeholder="Enter your first name"
-                                            title="Enter your first name."
+                                            title="First name must be 2-20 characters."
                                             minLength={2}
                                             maxLength={20}
                                             pattern="[A-Za-z ]+"
@@ -102,7 +102,7 @@ function Register() {
                                             name="lastName"
                                             className="form-control"
                                             placeholder="Enter your last name"
-                                            title="Enter your last name."
+                                            title="Last name must be 2-20 characters."
                                             minLength={2}
                                             maxLength={20}
                                             pattern="[A-Za-z ]+"

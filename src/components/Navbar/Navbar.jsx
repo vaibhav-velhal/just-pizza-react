@@ -54,7 +54,7 @@ function Navbar() {
                     <img src="./../../../logo.png" alt="JustPizza-logo" className="mb-1" style={{height: 30, width: 30}}/>JustPizza
                 </a>
 
-                <div className="collapse navbar-collapse justify-content-between ms-2 ms-lg-0" id="navbarNav">
+                <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul className="navbar-nav mx-auto gap-1 gap-md-4">
                         <li className="nav-item fw-semibold">
                             <NavLink to="/">Home</NavLink>
@@ -77,7 +77,7 @@ function Navbar() {
                         </li>
                     </ul>
                 </div>
-                <div className="d-lg-none ms-2 ms-lg-0">
+                <div className="d-lg-none">
                     {authButton}
                 </div>
             </div>
