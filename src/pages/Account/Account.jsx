@@ -119,7 +119,7 @@ function Account() {
                                     <button 
                                         className="btn border-0 delete-profile-btn text-start" type='button' 
                                         onClick={handleDeleteUser} disabled={token ? false : true}
-                                    ><MdDeleteOutline className="mb-2 me-1" size={21} />Delete your account</button>
+                                    ><MdDeleteOutline className="mb-2" size={21} />Delete account</button>
                                     <hr className="my-2" />
                                     {
                                         token ? 

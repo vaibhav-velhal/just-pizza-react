@@ -10,11 +10,6 @@
     margin: 0 10rem;
 }
 
-.registration-page input:focus {
-    outline: none;
-    box-shadow: none;
-}
-
 .registration-page .btn {
     background-color: #df2620;
 }
