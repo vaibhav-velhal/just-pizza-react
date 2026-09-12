@@ -1,0 +1,25 @@
+{
+  "name": "just-pizza-backend-server",
+  "version": "1.0.0",
+  "description": "A just pizza backend server.",
+  "license": "ISC",
+  "author": "Vaibhav Velhal",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "joi": "^18.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "md5": "^2.3.0",
+    "mongoose": "^9.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
