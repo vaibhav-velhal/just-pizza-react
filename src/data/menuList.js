@@ -15,61 +15,73 @@ export const menuList = [
     {
         name: "Margherita Pizza",
         image: margheritaPizza,
-        price: 110,
+        price: 249,
+        category: ["veg", "popular"]
     },
     {
         name: "Pepperoni Pizza",
         image: pepperoniPizza,
-        price: 365,
+        price: 349,
+        category: ["nonveg", "popular"]
     },
     {
         name: "Mediterranean Pizza",
         image: mediterraneanPizza,
-        price: 250,
+        price: 299,
+        category: ["veg", "specialty", "popular"]
     },
     {
         name: "New York Style Pizza",
         image: newYorkStylePizza,
-        price: 190,
+        price: 349,
+        category: ["specialty", "popular"]
     },
     {
         name: "Four Cheese Pizza",
         image: fourCheesePizza,
-        price: 265,
+        price: 399,
+        category: ["veg", "cheese", "popular"]
     },
     {
         name: "BBQ Chicken Pizza",
         image: bbqChickenPizza,
-        price: 170,
+        price: 429,
+        category: ["nonveg", "popular"]
     },
     {
         name: "Supreme Pizza",
         image: supremePizza,
-        price: 240,
+        price: 350,
+        category: ["nonveg"]
     },
     {
         name: "Chicken Alfredo Pizza",
         image: chickenAlfredoPizza,
-        price: 330,
+        price: 399,
+        category: ["nonveg"]
     },
     {
         name: "Neapolitan Pizza",
         image: neapolitanPizza,
         price: 350,
+        category: ["veg", "specialty"]
     },
     {
         name: "Sicilian Pizza",
         image: sicilianPizza,
-        price: 190,
+        price: 299,
+        category: ["veg", "specialty"]
     },
     {
         name: "Mushroom Pizza",
         image: mushroomPizza,
-        price: 190,
+        price: 399,
+        category: ["veg"]
     },
     {
         name: "Veggie Pizza",
         image: veggiePizza,
-        price: 190,
+        price: 399,
+        category: ["veg"]
     },
 ]
